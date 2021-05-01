@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Desktop_Calculator
 {
-    public partial class Form1 : Form
+    public partial class Window : Form
     {
-        public Form1()
+        public Window()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace Desktop_Calculator
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Percent_Click(object sender, EventArgs e)
         {
 
         }
