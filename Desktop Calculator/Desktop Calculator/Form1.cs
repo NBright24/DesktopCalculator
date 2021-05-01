@@ -31,5 +31,10 @@ namespace Desktop_Calculator
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
