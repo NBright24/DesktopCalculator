@@ -53,9 +53,10 @@ namespace Desktop_Calculator
             this.ClearAllBTN = new System.Windows.Forms.Button();
             this.BackSpaceBTN = new System.Windows.Forms.Button();
             this.PercentBTN = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.StandardLBL = new System.Windows.Forms.Label();
+            this.AnswerBox = new System.Windows.Forms.TextBox();
+            this.EquationBox = new System.Windows.Forms.TextBox();
+            this.TypeLabel = new System.Windows.Forms.Label();
+            this.CalculatorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PosNegBTN
@@ -394,44 +395,50 @@ namespace Desktop_Calculator
             this.PercentBTN.Text = "%";
             this.PercentBTN.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // AnswerBox
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.AnswerBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(3, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(403, 50);
-            this.textBox2.TabIndex = 77;
-            this.textBox2.Text = "0";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.AnswerBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.AnswerBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AnswerBox.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AnswerBox.Location = new System.Drawing.Point(3, 90);
+            this.AnswerBox.Name = "AnswerBox";
+            this.AnswerBox.Size = new System.Drawing.Size(403, 50);
+            this.AnswerBox.TabIndex = 77;
+            this.AnswerBox.Text = "0";
+            this.AnswerBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox3
+            // EquationBox
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.EquationBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(3, 34);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(403, 50);
-            this.textBox3.TabIndex = 78;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EquationBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.EquationBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.EquationBox.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EquationBox.Location = new System.Drawing.Point(3, 34);
+            this.EquationBox.Name = "EquationBox";
+            this.EquationBox.Size = new System.Drawing.Size(403, 50);
+            this.EquationBox.TabIndex = 78;
+            this.EquationBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // StandardLBL
+            // TypeLabel
             // 
-            this.StandardLBL.AllowDrop = true;
-            this.StandardLBL.AutoSize = true;
-            this.StandardLBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StandardLBL.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.StandardLBL.Location = new System.Drawing.Point(3, 9);
-            this.StandardLBL.Name = "StandardLBL";
-            this.StandardLBL.Size = new System.Drawing.Size(95, 22);
-            this.StandardLBL.TabIndex = 79;
-            this.StandardLBL.Text = "Standard";
+            this.TypeLabel.AutoSize = true;
+            this.TypeLabel.Location = new System.Drawing.Point(-51, -75);
+            this.TypeLabel.Name = "TypeLabel";
+            this.TypeLabel.Size = new System.Drawing.Size(38, 15);
+            this.TypeLabel.TabIndex = 80;
+            this.TypeLabel.Text = "label1";
+            // 
+            // CalculatorLabel
+            // 
+            this.CalculatorLabel.AutoSize = true;
+            this.CalculatorLabel.Location = new System.Drawing.Point(35, 16);
+            this.CalculatorLabel.Name = "CalculatorLabel";
+            this.CalculatorLabel.Size = new System.Drawing.Size(38, 15);
+            this.CalculatorLabel.TabIndex = 81;
+            this.CalculatorLabel.Text = "label1";
             // 
             // Window
             // 
@@ -439,9 +446,10 @@ namespace Desktop_Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(409, 497);
-            this.Controls.Add(this.StandardLBL);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.CalculatorLabel);
+            this.Controls.Add(this.TypeLabel);
+            this.Controls.Add(this.EquationBox);
+            this.Controls.Add(this.AnswerBox);
             this.Controls.Add(this.ClearBTN);
             this.Controls.Add(this.ClearAllBTN);
             this.Controls.Add(this.BackSpaceBTN);
@@ -502,9 +510,10 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button ClearAllBTN;
         private System.Windows.Forms.Button BackSpaceBTN;
         private System.Windows.Forms.Button PercentBTN;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label StandardLBL;
+        private System.Windows.Forms.TextBox AnswerBox;
+        private System.Windows.Forms.TextBox EquationBox;
+        private System.Windows.Forms.Label TypeLabel;
+        private System.Windows.Forms.Label CalculatorLabel;
     }
 }
 
