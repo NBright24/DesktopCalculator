@@ -53,10 +53,14 @@ namespace Desktop_Calculator
             this.ClearAllBTN = new System.Windows.Forms.Button();
             this.BackSpaceBTN = new System.Windows.Forms.Button();
             this.PercentBTN = new System.Windows.Forms.Button();
-            this.AnswerBox = new System.Windows.Forms.TextBox();
+            this.AnswerValueBox = new System.Windows.Forms.TextBox();
             this.EquationBox = new System.Windows.Forms.TextBox();
             this.TypeLabel = new System.Windows.Forms.Label();
             this.CalculatorLabel = new System.Windows.Forms.Label();
+            this.MemoryCLRBTN = new System.Windows.Forms.Button();
+            this.MemoryRMVBTN = new System.Windows.Forms.Button();
+            this.MemoryAddBTN = new System.Windows.Forms.Button();
+            this.MemoryMinusBTN = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PosNegBTN
@@ -308,7 +312,7 @@ namespace Desktop_Calculator
             this.SquareBTN.Name = "SquareBTN";
             this.SquareBTN.Size = new System.Drawing.Size(100, 57);
             this.SquareBTN.TabIndex = 71;
-            this.SquareBTN.Text = "x**2";
+            this.SquareBTN.Text = "x2";
             this.SquareBTN.UseVisualStyleBackColor = false;
             // 
             // DivideBTN
@@ -395,19 +399,19 @@ namespace Desktop_Calculator
             this.PercentBTN.Text = "%";
             this.PercentBTN.UseVisualStyleBackColor = false;
             // 
-            // AnswerBox
+            // AnswerValueBox
             // 
-            this.AnswerBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.AnswerValueBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AnswerBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.AnswerBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AnswerBox.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AnswerBox.Location = new System.Drawing.Point(3, 90);
-            this.AnswerBox.Name = "AnswerBox";
-            this.AnswerBox.Size = new System.Drawing.Size(403, 50);
-            this.AnswerBox.TabIndex = 77;
-            this.AnswerBox.Text = "0";
-            this.AnswerBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.AnswerValueBox.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.AnswerValueBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AnswerValueBox.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AnswerValueBox.Location = new System.Drawing.Point(3, 65);
+            this.AnswerValueBox.Name = "AnswerValueBox";
+            this.AnswerValueBox.Size = new System.Drawing.Size(403, 50);
+            this.AnswerValueBox.TabIndex = 77;
+            this.AnswerValueBox.Text = "0";
+            this.AnswerValueBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // EquationBox
             // 
@@ -415,11 +419,12 @@ namespace Desktop_Calculator
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EquationBox.BackColor = System.Drawing.SystemColors.ControlLight;
             this.EquationBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EquationBox.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.EquationBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EquationBox.Location = new System.Drawing.Point(3, 34);
             this.EquationBox.Name = "EquationBox";
-            this.EquationBox.Size = new System.Drawing.Size(403, 50);
+            this.EquationBox.Size = new System.Drawing.Size(403, 25);
             this.EquationBox.TabIndex = 78;
+            this.EquationBox.Text = "1 + 1";
             this.EquationBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TypeLabel
@@ -434,11 +439,68 @@ namespace Desktop_Calculator
             // CalculatorLabel
             // 
             this.CalculatorLabel.AutoSize = true;
-            this.CalculatorLabel.Location = new System.Drawing.Point(35, 16);
+            this.CalculatorLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CalculatorLabel.Location = new System.Drawing.Point(3, 1);
             this.CalculatorLabel.Name = "CalculatorLabel";
-            this.CalculatorLabel.Size = new System.Drawing.Size(38, 15);
+            this.CalculatorLabel.Size = new System.Drawing.Size(99, 30);
             this.CalculatorLabel.TabIndex = 81;
-            this.CalculatorLabel.Text = "label1";
+            this.CalculatorLabel.Text = "Standard";
+            // 
+            // MemoryCLRBTN
+            // 
+            this.MemoryCLRBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryCLRBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryCLRBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemoryCLRBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MemoryCLRBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MemoryCLRBTN.Location = new System.Drawing.Point(3, 118);
+            this.MemoryCLRBTN.Name = "MemoryCLRBTN";
+            this.MemoryCLRBTN.Size = new System.Drawing.Size(100, 27);
+            this.MemoryCLRBTN.TabIndex = 82;
+            this.MemoryCLRBTN.Text = "MC";
+            this.MemoryCLRBTN.UseVisualStyleBackColor = false;
+            // 
+            // MemoryRMVBTN
+            // 
+            this.MemoryRMVBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryRMVBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryRMVBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemoryRMVBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MemoryRMVBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MemoryRMVBTN.Location = new System.Drawing.Point(104, 118);
+            this.MemoryRMVBTN.Name = "MemoryRMVBTN";
+            this.MemoryRMVBTN.Size = new System.Drawing.Size(100, 27);
+            this.MemoryRMVBTN.TabIndex = 83;
+            this.MemoryRMVBTN.Text = "MR";
+            this.MemoryRMVBTN.UseVisualStyleBackColor = false;
+            // 
+            // MemoryAddBTN
+            // 
+            this.MemoryAddBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryAddBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryAddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemoryAddBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MemoryAddBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MemoryAddBTN.Location = new System.Drawing.Point(205, 118);
+            this.MemoryAddBTN.Name = "MemoryAddBTN";
+            this.MemoryAddBTN.Size = new System.Drawing.Size(100, 27);
+            this.MemoryAddBTN.TabIndex = 84;
+            this.MemoryAddBTN.Text = "M+";
+            this.MemoryAddBTN.UseVisualStyleBackColor = false;
+            // 
+            // MemoryMinusBTN
+            // 
+            this.MemoryMinusBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryMinusBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MemoryMinusBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MemoryMinusBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MemoryMinusBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MemoryMinusBTN.Location = new System.Drawing.Point(306, 118);
+            this.MemoryMinusBTN.Name = "MemoryMinusBTN";
+            this.MemoryMinusBTN.Size = new System.Drawing.Size(100, 27);
+            this.MemoryMinusBTN.TabIndex = 85;
+            this.MemoryMinusBTN.Text = "M-";
+            this.MemoryMinusBTN.UseVisualStyleBackColor = false;
             // 
             // Window
             // 
@@ -446,10 +508,14 @@ namespace Desktop_Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(409, 497);
+            this.Controls.Add(this.MemoryMinusBTN);
+            this.Controls.Add(this.MemoryAddBTN);
+            this.Controls.Add(this.MemoryRMVBTN);
+            this.Controls.Add(this.MemoryCLRBTN);
             this.Controls.Add(this.CalculatorLabel);
             this.Controls.Add(this.TypeLabel);
             this.Controls.Add(this.EquationBox);
-            this.Controls.Add(this.AnswerBox);
+            this.Controls.Add(this.AnswerValueBox);
             this.Controls.Add(this.ClearBTN);
             this.Controls.Add(this.ClearAllBTN);
             this.Controls.Add(this.BackSpaceBTN);
@@ -510,10 +576,14 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button ClearAllBTN;
         private System.Windows.Forms.Button BackSpaceBTN;
         private System.Windows.Forms.Button PercentBTN;
-        private System.Windows.Forms.TextBox AnswerBox;
+        private System.Windows.Forms.TextBox AnswerValueBox;
         private System.Windows.Forms.TextBox EquationBox;
         private System.Windows.Forms.Label TypeLabel;
         private System.Windows.Forms.Label CalculatorLabel;
+        private System.Windows.Forms.Button MemoryCLRBTN;
+        private System.Windows.Forms.Button MemoryRMVBTN;
+        private System.Windows.Forms.Button MemoryAddBTN;
+        private System.Windows.Forms.Button MemoryMinusBTN;
     }
 }
 
