@@ -29,6 +29,7 @@ namespace Desktop_Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Window));
             this.PosNegBTN = new System.Windows.Forms.Button();
             this.EqualBTN = new System.Windows.Forms.Button();
             this.ZeroBTN = new System.Windows.Forms.Button();
@@ -174,6 +175,7 @@ namespace Desktop_Calculator
             this.OneBTN.TabIndex = 57;
             this.OneBTN.Text = "1";
             this.OneBTN.UseVisualStyleBackColor = false;
+            this.OneBTN.Click += new System.EventHandler(this.OneBTN_Click);
             // 
             // SixBTN
             // 
@@ -408,9 +410,9 @@ namespace Desktop_Calculator
             this.AnswerValueBox.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.AnswerValueBox.Location = new System.Drawing.Point(3, 65);
             this.AnswerValueBox.Name = "AnswerValueBox";
+            this.AnswerValueBox.PlaceholderText = "0";
             this.AnswerValueBox.Size = new System.Drawing.Size(403, 50);
             this.AnswerValueBox.TabIndex = 77;
-            this.AnswerValueBox.Text = "0";
             this.AnswerValueBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // EquationBox
@@ -422,9 +424,9 @@ namespace Desktop_Calculator
             this.EquationBox.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.EquationBox.Location = new System.Drawing.Point(3, 34);
             this.EquationBox.Name = "EquationBox";
+            this.EquationBox.ReadOnly = true;
             this.EquationBox.Size = new System.Drawing.Size(403, 25);
             this.EquationBox.TabIndex = 78;
-            this.EquationBox.Text = "1 + 1";
             this.EquationBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TypeLabel
@@ -541,6 +543,7 @@ namespace Desktop_Calculator
             this.Controls.Add(this.EqualBTN);
             this.Controls.Add(this.PosNegBTN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Window";
             this.Opacity = 0.98D;

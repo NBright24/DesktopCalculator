@@ -41,5 +41,10 @@ namespace Desktop_Calculator
         {
 
         }
+
+        private void OneBTN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
