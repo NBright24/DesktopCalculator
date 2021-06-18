@@ -175,7 +175,6 @@ namespace Desktop_Calculator
             this.OneBTN.TabIndex = 57;
             this.OneBTN.Text = "1";
             this.OneBTN.UseVisualStyleBackColor = false;
-            this.OneBTN.Click += new System.EventHandler(this.OneBTN_Click);
             // 
             // SixBTN
             // 
