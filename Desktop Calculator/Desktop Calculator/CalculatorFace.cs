@@ -38,52 +38,52 @@ namespace Desktop_Calculator
 
         private void OneBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 1;
+            DisplayNum("1");
         }
 
         private void TwoBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 2;
+            DisplayNum("2");
         }
 
         private void ThreeBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 3;
+            DisplayNum("3");
         }
 
         private void FourBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 4;
+            DisplayNum("4");
         }
 
         private void FiveBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 5;
+            DisplayNum("5");
         }
 
         private void SixBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 6;
+            DisplayNum("6");
         }
 
         private void SevenBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 7;
+            DisplayNum("7");
         }
 
         private void EightBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 8;
+            DisplayNum("8");
         }
 
         private void NineBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 9;
+            DisplayNum("9");
         }
 
         private void ZeroBTN_Click(object sender, EventArgs e)
         {
-            ValueBox.Text += 0;
+            DisplayNum("0");
         }
 
         private void PlusBTN_Click(object sender, EventArgs e)
@@ -192,6 +192,11 @@ namespace Desktop_Calculator
             {
                 e.Handled = true;
             }
+        }
+
+        private void DisplayNum(string X)
+        {
+            ValueBox.Text += X;
         }
     }
 }
