@@ -35,7 +35,7 @@ namespace Desktop_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-         
+
         }
 
         private static void NumType(int X)
@@ -115,7 +115,7 @@ namespace Desktop_Calculator
 
         private void PointBTN_Click(object sender, EventArgs e)
         {
-
+            DisplayNum(".");
         }
 
         private void PosNegBTN_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace Desktop_Calculator
 
         private void EqualBTN_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         //MODIFY THIS PART!!!
@@ -181,7 +181,6 @@ namespace Desktop_Calculator
 
         private void DisplayNum(string X)
         {
-            ValueBox.Text = "";
             ValueBox.Text += X;
             UserVal += X;
         }
@@ -191,6 +190,14 @@ namespace Desktop_Calculator
             OpValue1 = UserVal;
             Operation = Y;
             UserVal = string.Empty;
+        }
+
+        private void ClearAll()
+        {
+            ValueBox.Text = "";
+            UserVal = string.Empty;
+            OpValue1 = string.Empty;
+            OpValue2 = string.Empty;
         }
     }
 }
