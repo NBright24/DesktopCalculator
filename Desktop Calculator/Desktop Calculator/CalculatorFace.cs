@@ -110,7 +110,20 @@ namespace Desktop_Calculator
 
         private void PointBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum(".");
+            if(ValueBox.Text.Contains("."))
+            {
+
+            }
+            else
+            {
+                if(ValueBox.Text == "")
+                {
+                    DisplayNum("0");
+                    DisplayNum(".");
+                }
+                else
+                    DisplayNum(".");
+            }
         }
 
         private void PosNegBTN_Click(object sender, EventArgs e)
@@ -160,7 +173,13 @@ namespace Desktop_Calculator
 
         private void ValueBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            CharCheckKey(sender, e);
+            if (ValueBox.Text == "")
+            {
+                DisplayNum("0");
+                CharCheckKey(sender, e);
+            }
+            else
+                CharCheckKey(sender, e);
         }
 
         private void CharCheckKey(object sender, KeyPressEventArgs e)
