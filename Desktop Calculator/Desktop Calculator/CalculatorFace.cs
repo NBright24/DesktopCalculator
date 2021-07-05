@@ -12,19 +12,26 @@ namespace Desktop_Calculator
 {
     public partial class Window : Form
     {
+
+        //float UserVal = 0;
+        //float UserVal2 = 0;
+        //Boolean IsAdd = false;
+        //Boolean IsMin = false;
+        //Boolean IsMul = false;
+        //Boolean IsDiv = false;
+        //short count = 1;
+        //float result = 0;
+
+        string UserVal = string.Empty;
+        string Operation1 = string.Empty;
+        string Operation2 = string.Empty;
+        char Operation;
+        float Result = 0;
+
         public Window()
         {
             InitializeComponent();
         }
-
-        float UserVal = 0;
-        float UserVal2 = 0;
-        Boolean IsAdd = false;
-        Boolean IsMin = false;
-        Boolean IsMul = false;
-        Boolean IsDiv = false;
-        short count = 1;
-        float result = 0;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -88,30 +95,22 @@ namespace Desktop_Calculator
 
         private void PlusBTN_Click(object sender, EventArgs e)
         {
-            UserVal = float.Parse(ValueBox.Text);
-            IsAdd = true;
-            ValueBox.Text = "";
+           
         }
 
         private void MinusBTN_Click(object sender, EventArgs e)
         {
-            UserVal = float.Parse(ValueBox.Text);
-            IsMin = true;
-            ValueBox.Text = "";
+           
         }
 
         private void MultiplyBTN_Click(object sender, EventArgs e)
         {
-            UserVal = float.Parse(ValueBox.Text);
-            IsMul = true;
-            ValueBox.Text = "";
+           
         }
 
         private void DivideBTN_Click(object sender, EventArgs e)
         {
-            UserVal = float.Parse(ValueBox.Text);
-            IsDiv = true;
-            ValueBox.Text = "";
+            
         }
 
         private void PointBTN_Click(object sender, EventArgs e)
@@ -161,22 +160,8 @@ namespace Desktop_Calculator
 
         private void EqualBTN_Click(object sender, EventArgs e)
         {
-            UserVal2 = float.Parse(ValueBox.Text);
-
-            if (IsAdd == true)
-            {
-               result = UserVal + UserVal2;
-            }
-            if(IsMin == true)
-            {
-                result = UserVal - UserVal2;
-            }
-
-            ValueBox.Text = "";
-            ValueBox.Text = Convert.ToString(result);
-            count = 1;
+            
         }
-
 
         //MODIFY THIS PART!!!
         private void ValueBox_KeyPress(object sender, KeyPressEventArgs e)
