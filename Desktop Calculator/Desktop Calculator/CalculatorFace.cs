@@ -155,7 +155,7 @@ namespace Desktop_Calculator
 
         private void ClearAllBTN_Click(object sender, EventArgs e)
         {
-
+            ClearAll();
         }
 
         private void EqualBTN_Click(object sender, EventArgs e)
