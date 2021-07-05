@@ -26,7 +26,7 @@ namespace Desktop_Calculator
         string OpValue1 = string.Empty;
         string OpValue2 = string.Empty;
         string Operation;
-        float Result = 0;
+        double Result = 0;
 
         public Window()
         {
@@ -36,11 +36,6 @@ namespace Desktop_Calculator
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private static void NumType(int X)
-        {
-            //TextBox ValueBox = ValueBox.Text += "X";
         }
 
         private void OneBTN_Click(object sender, EventArgs e)
@@ -163,9 +158,15 @@ namespace Desktop_Calculator
 
         }
 
-        //MODIFY THIS PART!!!
         private void ValueBox_KeyPress(object sender, KeyPressEventArgs e)
         {
+            CharCheckKey(sender, e);
+        }
+
+        private void CharCheckKey(object sender, KeyPressEventArgs e)
+        {
+            //MODIFY THIS PARTS
+
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
        (e.KeyChar != '.'))
             {
