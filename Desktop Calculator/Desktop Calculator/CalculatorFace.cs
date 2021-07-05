@@ -23,8 +23,8 @@ namespace Desktop_Calculator
         //float result = 0;
 
         string UserVal = string.Empty;
-        string Operation1 = string.Empty;
-        string Operation2 = string.Empty;
+        string OpValue1 = string.Empty;
+        string OpValue2 = string.Empty;
         char Operation;
         float Result = 0;
 
@@ -95,22 +95,22 @@ namespace Desktop_Calculator
 
         private void PlusBTN_Click(object sender, EventArgs e)
         {
-           
+            Operations("+");
         }
 
         private void MinusBTN_Click(object sender, EventArgs e)
         {
-           
+            Operations("-");
         }
 
         private void MultiplyBTN_Click(object sender, EventArgs e)
         {
-           
+            Operations("*");
         }
 
         private void DivideBTN_Click(object sender, EventArgs e)
         {
-            
+            Operations("/");
         }
 
         private void PointBTN_Click(object sender, EventArgs e)
@@ -182,6 +182,14 @@ namespace Desktop_Calculator
         private void DisplayNum(string X)
         {
             ValueBox.Text += X;
+            UserVal += X;
+        }
+
+        private void Operations(string Y)
+        {
+            OpValue1 = UserVal;
+            Operation = Y;
+            UserVal = string.Empty;
         }
     }
 }
