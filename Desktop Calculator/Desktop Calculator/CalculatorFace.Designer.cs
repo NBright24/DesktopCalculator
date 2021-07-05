@@ -392,7 +392,7 @@ namespace Desktop_Calculator
             this.ClearEntryBTN.TabIndex = 75;
             this.ClearEntryBTN.Text = "CE";
             this.ClearEntryBTN.UseVisualStyleBackColor = false;
-            this.ClearEntryBTN.Click += new System.EventHandler(this.ClearAllBTN_Click);
+            this.ClearEntryBTN.Click += new System.EventHandler(this.ClearEntryBTN_Click);
             // 
             // BackSpaceBTN
             // 

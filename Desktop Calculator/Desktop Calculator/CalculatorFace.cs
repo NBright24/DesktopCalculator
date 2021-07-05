@@ -129,7 +129,10 @@ namespace Desktop_Calculator
 
         private void PosNegBTN_Click(object sender, EventArgs e)
         {
+            if (ValueBox.Text.Contains("-"))
+            {
 
+            }
         }
 
         private void SqrtBTN_Click(object sender, EventArgs e)
@@ -162,7 +165,7 @@ namespace Desktop_Calculator
             ClearAll();
         }
 
-        private void ClearAllBTN_Click(object sender, EventArgs e)
+        private void ClearEntryBTN_Click(object sender, EventArgs e)
         {
             ValueBox.Text = "";
         }
@@ -211,6 +214,8 @@ namespace Desktop_Calculator
             OpValue1 = UserVal;
             Operation = Y;
             UserVal = string.Empty;
+            //Temporary
+            ValueBox.Text = string.Empty;
         }
 
         private void ClearAll()
