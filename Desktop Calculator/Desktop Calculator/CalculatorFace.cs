@@ -27,6 +27,7 @@ namespace Desktop_Calculator
         string OpValue2 = string.Empty;
         string Operation;
         double Result = 0;
+        ushort Count = 1;
 
         public Window()
         {
@@ -110,13 +111,13 @@ namespace Desktop_Calculator
 
         private void PointBTN_Click(object sender, EventArgs e)
         {
-            if(ValueBox.Text.Contains("."))
+            if (ValueBox.Text.Contains("."))
             {
 
             }
             else
             {
-                if(ValueBox.Text == "")
+                if (ValueBox.Text == "")
                 {
                     DisplayNum("0");
                     DisplayNum(".");
@@ -158,17 +159,17 @@ namespace Desktop_Calculator
 
         private void ClearBTN_Click(object sender, EventArgs e)
         {
-
+            ClearAll();
         }
 
         private void ClearAllBTN_Click(object sender, EventArgs e)
         {
-            ClearAll();
+            ValueBox.Text = "";
         }
 
         private void EqualBTN_Click(object sender, EventArgs e)
         {
-
+            Compute();
         }
 
         private void ValueBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -218,6 +219,42 @@ namespace Desktop_Calculator
             UserVal = string.Empty;
             OpValue1 = string.Empty;
             OpValue2 = string.Empty;
+        }
+
+        private void Compute()
+        {
+            OpValue2 = UserVal;
+            double Val1, Val2;
+            double.TryParse(OpValue1, out Val1);
+            double.TryParse(OpValue2, out Val2);
+
+            if (Operation == "*")
+            {
+                Result = Val1 * Val2;
+                ValueBox.Text = Result.ToString();
+            }
+            if (Operation == "/")
+            {
+                if(Val2 != 0)
+                {
+                    Result = Val1 / Val2;
+                    ValueBox.Text = Result.ToString();
+                }
+                else
+                {
+                    ValueBox.Text = "Math Error";
+                }
+            }
+            if (Operation == "+")
+            {
+                Result = Val1 + Val2;
+                ValueBox.Text = Result.ToString();
+            }
+            if (Operation == "-")
+            {
+                Result = Val1 - Val2;
+                ValueBox.Text = Result.ToString();
+            }
         }
     }
 }

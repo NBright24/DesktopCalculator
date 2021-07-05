@@ -51,7 +51,7 @@ namespace Desktop_Calculator
             this.DivideBTN = new System.Windows.Forms.Button();
             this.FractionBTN = new System.Windows.Forms.Button();
             this.ClearBTN = new System.Windows.Forms.Button();
-            this.ClearAllBTN = new System.Windows.Forms.Button();
+            this.ClearEntryBTN = new System.Windows.Forms.Button();
             this.BackSpaceBTN = new System.Windows.Forms.Button();
             this.PercentBTN = new System.Windows.Forms.Button();
             this.ValueBox = new System.Windows.Forms.TextBox();
@@ -379,20 +379,20 @@ namespace Desktop_Calculator
             this.ClearBTN.UseVisualStyleBackColor = false;
             this.ClearBTN.Click += new System.EventHandler(this.ClearBTN_Click);
             // 
-            // ClearAllBTN
+            // ClearEntryBTN
             // 
-            this.ClearAllBTN.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClearAllBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.ClearAllBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ClearAllBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ClearAllBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ClearAllBTN.Location = new System.Drawing.Point(104, 146);
-            this.ClearAllBTN.Name = "ClearAllBTN";
-            this.ClearAllBTN.Size = new System.Drawing.Size(100, 57);
-            this.ClearAllBTN.TabIndex = 75;
-            this.ClearAllBTN.Text = "CE";
-            this.ClearAllBTN.UseVisualStyleBackColor = false;
-            this.ClearAllBTN.Click += new System.EventHandler(this.ClearAllBTN_Click);
+            this.ClearEntryBTN.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.ClearEntryBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.ClearEntryBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearEntryBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ClearEntryBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ClearEntryBTN.Location = new System.Drawing.Point(104, 146);
+            this.ClearEntryBTN.Name = "ClearEntryBTN";
+            this.ClearEntryBTN.Size = new System.Drawing.Size(100, 57);
+            this.ClearEntryBTN.TabIndex = 75;
+            this.ClearEntryBTN.Text = "CE";
+            this.ClearEntryBTN.UseVisualStyleBackColor = false;
+            this.ClearEntryBTN.Click += new System.EventHandler(this.ClearAllBTN_Click);
             // 
             // BackSpaceBTN
             // 
@@ -544,7 +544,7 @@ namespace Desktop_Calculator
             this.Controls.Add(this.EquationBox);
             this.Controls.Add(this.ValueBox);
             this.Controls.Add(this.ClearBTN);
-            this.Controls.Add(this.ClearAllBTN);
+            this.Controls.Add(this.ClearEntryBTN);
             this.Controls.Add(this.BackSpaceBTN);
             this.Controls.Add(this.PercentBTN);
             this.Controls.Add(this.SqrtBTN);
@@ -602,7 +602,7 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button DivideBTN;
         private System.Windows.Forms.Button FractionBTN;
         private System.Windows.Forms.Button ClearBTN;
-        private System.Windows.Forms.Button ClearAllBTN;
+        private System.Windows.Forms.Button ClearEntryBTN;
         private System.Windows.Forms.Button BackSpaceBTN;
         private System.Windows.Forms.Button PercentBTN;
         private System.Windows.Forms.TextBox ValueBox;
