@@ -36,11 +36,11 @@ namespace Desktop_Calculator
             this.PointBTN = new System.Windows.Forms.Button();
             this.ThreeBTN = new System.Windows.Forms.Button();
             this.TwoBTN = new System.Windows.Forms.Button();
-            this.PlusBTN = new System.Windows.Forms.Button();
+            this.AddBTN = new System.Windows.Forms.Button();
             this.OneBTN = new System.Windows.Forms.Button();
             this.SixBTN = new System.Windows.Forms.Button();
             this.FiveBTN = new System.Windows.Forms.Button();
-            this.MinusBTN = new System.Windows.Forms.Button();
+            this.SubtractBTN = new System.Windows.Forms.Button();
             this.FourBTN = new System.Windows.Forms.Button();
             this.NineBTN = new System.Windows.Forms.Button();
             this.EightBTN = new System.Windows.Forms.Button();
@@ -154,20 +154,20 @@ namespace Desktop_Calculator
             this.TwoBTN.UseVisualStyleBackColor = false;
             this.TwoBTN.Click += new System.EventHandler(this.TwoBTN_Click);
             // 
-            // PlusBTN
+            // AddBTN
             // 
-            this.PlusBTN.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.PlusBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.PlusBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlusBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PlusBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.PlusBTN.Location = new System.Drawing.Point(306, 378);
-            this.PlusBTN.Name = "PlusBTN";
-            this.PlusBTN.Size = new System.Drawing.Size(100, 57);
-            this.PlusBTN.TabIndex = 58;
-            this.PlusBTN.Text = "+";
-            this.PlusBTN.UseVisualStyleBackColor = false;
-            this.PlusBTN.Click += new System.EventHandler(this.PlusBTN_Click);
+            this.AddBTN.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.AddBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.AddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddBTN.Location = new System.Drawing.Point(306, 378);
+            this.AddBTN.Name = "AddBTN";
+            this.AddBTN.Size = new System.Drawing.Size(100, 57);
+            this.AddBTN.TabIndex = 58;
+            this.AddBTN.Text = "+";
+            this.AddBTN.UseVisualStyleBackColor = false;
+            this.AddBTN.Click += new System.EventHandler(this.PlusBTN_Click);
             // 
             // OneBTN
             // 
@@ -214,20 +214,20 @@ namespace Desktop_Calculator
             this.FiveBTN.UseVisualStyleBackColor = false;
             this.FiveBTN.Click += new System.EventHandler(this.FiveBTN_Click);
             // 
-            // MinusBTN
+            // SubtractBTN
             // 
-            this.MinusBTN.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.MinusBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.MinusBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MinusBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MinusBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MinusBTN.Location = new System.Drawing.Point(306, 320);
-            this.MinusBTN.Name = "MinusBTN";
-            this.MinusBTN.Size = new System.Drawing.Size(100, 57);
-            this.MinusBTN.TabIndex = 62;
-            this.MinusBTN.Text = "-";
-            this.MinusBTN.UseVisualStyleBackColor = false;
-            this.MinusBTN.Click += new System.EventHandler(this.MinusBTN_Click);
+            this.SubtractBTN.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.SubtractBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.SubtractBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubtractBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SubtractBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.SubtractBTN.Location = new System.Drawing.Point(306, 320);
+            this.SubtractBTN.Name = "SubtractBTN";
+            this.SubtractBTN.Size = new System.Drawing.Size(100, 57);
+            this.SubtractBTN.TabIndex = 62;
+            this.SubtractBTN.Text = "-";
+            this.SubtractBTN.UseVisualStyleBackColor = false;
+            this.SubtractBTN.Click += new System.EventHandler(this.MinusBTN_Click);
             // 
             // FourBTN
             // 
@@ -557,11 +557,11 @@ namespace Desktop_Calculator
             this.Controls.Add(this.SevenBTN);
             this.Controls.Add(this.SixBTN);
             this.Controls.Add(this.FiveBTN);
-            this.Controls.Add(this.MinusBTN);
+            this.Controls.Add(this.SubtractBTN);
             this.Controls.Add(this.FourBTN);
             this.Controls.Add(this.ThreeBTN);
             this.Controls.Add(this.TwoBTN);
-            this.Controls.Add(this.PlusBTN);
+            this.Controls.Add(this.AddBTN);
             this.Controls.Add(this.OneBTN);
             this.Controls.Add(this.PointBTN);
             this.Controls.Add(this.ZeroBTN);
@@ -587,11 +587,11 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button PointBTN;
         private System.Windows.Forms.Button ThreeBTN;
         private System.Windows.Forms.Button TwoBTN;
-        private System.Windows.Forms.Button PlusBTN;
+        private System.Windows.Forms.Button AddBTN;
         private System.Windows.Forms.Button OneBTN;
         private System.Windows.Forms.Button SixBTN;
         private System.Windows.Forms.Button FiveBTN;
-        private System.Windows.Forms.Button MinusBTN;
+        private System.Windows.Forms.Button SubtractBTN;
         private System.Windows.Forms.Button FourBTN;
         private System.Windows.Forms.Button NineBTN;
         private System.Windows.Forms.Button EightBTN;

@@ -25,7 +25,7 @@ namespace Desktop_Calculator
         string UserVal = string.Empty;
         string OpValue1 = string.Empty;
         string OpValue2 = string.Empty;
-        char Operation;
+        string Operation;
         float Result = 0;
 
         public Window()
@@ -181,6 +181,7 @@ namespace Desktop_Calculator
 
         private void DisplayNum(string X)
         {
+            ValueBox.Text = "";
             ValueBox.Text += X;
             UserVal += X;
         }
