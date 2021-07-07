@@ -324,13 +324,13 @@ namespace Desktop_Calculator
             this.SquareBTN.BackColor = System.Drawing.SystemColors.MenuBar;
             this.SquareBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.SquareBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SquareBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SquareBTN.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SquareBTN.ForeColor = System.Drawing.SystemColors.ControlText;
             this.SquareBTN.Location = new System.Drawing.Point(104, 204);
             this.SquareBTN.Name = "SquareBTN";
             this.SquareBTN.Size = new System.Drawing.Size(100, 57);
             this.SquareBTN.TabIndex = 71;
-            this.SquareBTN.Text = "x2";
+            this.SquareBTN.Text = "x²";
             this.SquareBTN.UseVisualStyleBackColor = false;
             this.SquareBTN.Click += new System.EventHandler(this.SquareBTN_Click);
             // 

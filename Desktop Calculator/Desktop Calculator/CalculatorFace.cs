@@ -13,21 +13,18 @@ namespace Desktop_Calculator
     public partial class Window : Form
     {
 
-        //float UserVal = 0;
-        //float UserVal2 = 0;
-        //Boolean IsAdd = false;
-        //Boolean IsMin = false;
-        //Boolean IsMul = false;
-        //Boolean IsDiv = false;
-        //short count = 1;
-        //float result = 0;
+        //First Values
+        //string UserVal = string.Empty;
+        //string OpValue1 = string.Empty;
+        //string OpValue2 = string.Empty;
+        //string Operation;
+        //double Result = 0;
+        //ushort Count = 1;
 
-        string UserVal = string.Empty;
-        string OpValue1 = string.Empty;
-        string OpValue2 = string.Empty;
-        string Operation;
         double Result = 0;
-        ushort Count = 1;
+        string Operation = "";
+        bool ValEnter = false;
+        char Operator;
 
         public Window()
         {
@@ -41,7 +38,7 @@ namespace Desktop_Calculator
 
         private void OneBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("1");
+            DisplayNum("1", OneBTN);
         }
 
         private void TwoBTN_Click(object sender, EventArgs e)
@@ -203,10 +200,16 @@ namespace Desktop_Calculator
             }
         }
 
-        private void DisplayNum(string X)
+        private void DisplayNum(string X, Button Y)
         {
-            ValueBox.Text += X;
-            UserVal += X;
+            //Y = (Button)sender;
+
+            if ((ValueBox.Text == "0") || (ValEnter))
+            {
+                ValueBox.Text = "";
+                ValEnter = false;
+            }
+            if (e)
         }
 
         private void Operations(string Y)

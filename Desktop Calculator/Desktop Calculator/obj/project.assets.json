@@ -8,25 +8,25 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\brebz\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Brient Neilson\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brebz\\Documents\\GitHub\\DesktopCalculator\\Desktop Calculator\\Desktop Calculator\\Desktop Calculator.csproj",
+      "projectUniqueName": "D:\\Program Files\\GitHub\\DesktopCalculator\\Desktop Calculator\\Desktop Calculator\\Desktop Calculator.csproj",
       "projectName": "Desktop Calculator",
-      "projectPath": "C:\\Users\\brebz\\Documents\\GitHub\\DesktopCalculator\\Desktop Calculator\\Desktop Calculator\\Desktop Calculator.csproj",
-      "packagesPath": "C:\\Users\\brebz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brebz\\Documents\\GitHub\\DesktopCalculator\\Desktop Calculator\\Desktop Calculator\\obj\\",
+      "projectPath": "D:\\Program Files\\GitHub\\DesktopCalculator\\Desktop Calculator\\Desktop Calculator\\Desktop Calculator.csproj",
+      "packagesPath": "C:\\Users\\Brient Neilson\\.nuget\\packages\\",
+      "outputPath": "D:\\Program Files\\GitHub\\DesktopCalculator\\Desktop Calculator\\Desktop Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\brebz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Brient Neilson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"

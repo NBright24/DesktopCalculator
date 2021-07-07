@@ -55,3 +55,22 @@ C:\Users\brebz\Documents\GitHub\DesktopCalculator\Desktop Calculator\Desktop Cal
 C:\Users\brebz\Documents\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\ref\Desktop Calculator.dll
 C:\Users\brebz\Documents\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.pdb
 C:\Users\brebz\Documents\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.genruntimeconfig.cache
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\bin\Debug\net5.0-windows\Desktop Calculator.exe
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\bin\Debug\net5.0-windows\Desktop Calculator.deps.json
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\bin\Debug\net5.0-windows\Desktop Calculator.runtimeconfig.json
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\bin\Debug\net5.0-windows\Desktop Calculator.runtimeconfig.dev.json
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\bin\Debug\net5.0-windows\Desktop Calculator.dll
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\bin\Debug\net5.0-windows\ref\Desktop Calculator.dll
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\bin\Debug\net5.0-windows\Desktop Calculator.pdb
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.csproj.AssemblyReference.cache
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop_Calculator.Window.resources
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop_Calculator.Properties.Resources.resources
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.csproj.GenerateResource.cache
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.AssemblyInfoInputs.cache
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.AssemblyInfo.cs
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.csproj.CoreCompileInputs.cache
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.dll
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\ref\Desktop Calculator.dll
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.pdb
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.genruntimeconfig.cache
