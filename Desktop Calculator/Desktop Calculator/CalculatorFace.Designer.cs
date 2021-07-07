@@ -437,6 +437,7 @@ namespace Desktop_Calculator
             this.ValueBox.PlaceholderText = "0";
             this.ValueBox.Size = new System.Drawing.Size(403, 50);
             this.ValueBox.TabIndex = 77;
+            this.ValueBox.Text = "0";
             this.ValueBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.ValueBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueBox_KeyPress);
             // 
