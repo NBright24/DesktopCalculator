@@ -38,52 +38,52 @@ namespace Desktop_Calculator
 
         private void OneBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("1", OneBTN);
+            DisplayNum(sender, OneBTN);
         }
 
         private void TwoBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("2");
+
         }
 
         private void ThreeBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("3");
+
         }
 
         private void FourBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("4");
+
         }
 
         private void FiveBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("5");
+
         }
 
         private void SixBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("6");
+
         }
 
         private void SevenBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("7");
+
         }
 
         private void EightBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("8");
+
         }
 
         private void NineBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("9");
+
         }
 
         private void ZeroBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum("0");
+
         }
 
         private void PlusBTN_Click(object sender, EventArgs e)
@@ -108,20 +108,20 @@ namespace Desktop_Calculator
 
         private void PointBTN_Click(object sender, EventArgs e)
         {
-            if (ValueBox.Text.Contains("."))
-            {
+            //if (ValueBox.Text.Contains("."))
+            //{
 
-            }
-            else
-            {
-                if (ValueBox.Text == "")
-                {
-                    DisplayNum("0");
-                    DisplayNum(".");
-                }
-                else
-                    DisplayNum(".");
-            }
+            //}
+            //else
+            //{
+            //    if (ValueBox.Text == "")
+            //    {
+            //        DisplayNum("0");
+            //        DisplayNum(".");
+            //    }
+            //    else
+            //        DisplayNum(".");
+            //}
         }
 
         private void PosNegBTN_Click(object sender, EventArgs e)
@@ -172,6 +172,7 @@ namespace Desktop_Calculator
             Compute();
         }
 
+        //IF SHIT DID NOT WORK, DISABLE KEYBOARD INPUT
         private void ValueBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (ValueBox.Text == "")
@@ -200,7 +201,7 @@ namespace Desktop_Calculator
             }
         }
 
-        private void DisplayNum(string X, Button Y)
+        private void DisplayNum(object X, Button Y)
         {
             //Y = (Button)sender;
 

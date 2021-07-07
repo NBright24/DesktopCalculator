@@ -107,7 +107,6 @@ namespace Desktop_Calculator
             this.ZeroBTN.TabIndex = 55;
             this.ZeroBTN.Text = "0";
             this.ZeroBTN.UseVisualStyleBackColor = false;
-            this.ZeroBTN.Click += new System.EventHandler(this.ZeroBTN_Click);
             // 
             // PointBTN
             // 
@@ -137,7 +136,6 @@ namespace Desktop_Calculator
             this.ThreeBTN.TabIndex = 60;
             this.ThreeBTN.Text = "3";
             this.ThreeBTN.UseVisualStyleBackColor = false;
-            this.ThreeBTN.Click += new System.EventHandler(this.ThreeBTN_Click);
             // 
             // TwoBTN
             // 
@@ -152,7 +150,6 @@ namespace Desktop_Calculator
             this.TwoBTN.TabIndex = 59;
             this.TwoBTN.Text = "2";
             this.TwoBTN.UseVisualStyleBackColor = false;
-            this.TwoBTN.Click += new System.EventHandler(this.TwoBTN_Click);
             // 
             // AddBTN
             // 
@@ -182,7 +179,6 @@ namespace Desktop_Calculator
             this.OneBTN.TabIndex = 57;
             this.OneBTN.Text = "1";
             this.OneBTN.UseVisualStyleBackColor = false;
-            this.OneBTN.Click += new System.EventHandler(this.OneBTN_Click);
             // 
             // SixBTN
             // 
@@ -197,7 +193,6 @@ namespace Desktop_Calculator
             this.SixBTN.TabIndex = 64;
             this.SixBTN.Text = "6";
             this.SixBTN.UseVisualStyleBackColor = false;
-            this.SixBTN.Click += new System.EventHandler(this.SixBTN_Click);
             // 
             // FiveBTN
             // 
@@ -212,7 +207,6 @@ namespace Desktop_Calculator
             this.FiveBTN.TabIndex = 63;
             this.FiveBTN.Text = "5";
             this.FiveBTN.UseVisualStyleBackColor = false;
-            this.FiveBTN.Click += new System.EventHandler(this.FiveBTN_Click);
             // 
             // SubtractBTN
             // 
@@ -242,7 +236,6 @@ namespace Desktop_Calculator
             this.FourBTN.TabIndex = 61;
             this.FourBTN.Text = "4";
             this.FourBTN.UseVisualStyleBackColor = false;
-            this.FourBTN.Click += new System.EventHandler(this.FourBTN_Click);
             // 
             // NineBTN
             // 
@@ -257,7 +250,6 @@ namespace Desktop_Calculator
             this.NineBTN.TabIndex = 68;
             this.NineBTN.Text = "9";
             this.NineBTN.UseVisualStyleBackColor = false;
-            this.NineBTN.Click += new System.EventHandler(this.NineBTN_Click);
             // 
             // EightBTN
             // 
@@ -272,7 +264,6 @@ namespace Desktop_Calculator
             this.EightBTN.TabIndex = 67;
             this.EightBTN.Text = "8";
             this.EightBTN.UseVisualStyleBackColor = false;
-            this.EightBTN.Click += new System.EventHandler(this.EightBTN_Click);
             // 
             // MultiplyBTN
             // 
@@ -302,7 +293,6 @@ namespace Desktop_Calculator
             this.SevenBTN.TabIndex = 65;
             this.SevenBTN.Text = "7";
             this.SevenBTN.UseVisualStyleBackColor = false;
-            this.SevenBTN.Click += new System.EventHandler(this.SevenBTN_Click);
             // 
             // SqrtBTN
             // 
