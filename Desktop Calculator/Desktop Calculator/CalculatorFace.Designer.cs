@@ -65,9 +65,14 @@ namespace Desktop_Calculator
             this.MEMSaveBTN = new System.Windows.Forms.Button();
             this.Memory = new System.Windows.Forms.Button();
             this.MenuIcon = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.HistDisplay = new System.Windows.Forms.RichTextBox();
             this.ClearHistBTN = new System.Windows.Forms.PictureBox();
             this.OnTopBTN = new System.Windows.Forms.PictureBox();
+            this.HistoryLBL = new System.Windows.Forms.Label();
+            this.MemoryLBL = new System.Windows.Forms.Label();
+            this.HighlightHIST = new System.Windows.Forms.Button();
+            this.HighlightMEM = new System.Windows.Forms.Button();
+            this.MemDisp = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ClearHistBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OnTopBTN)).BeginInit();
             this.SuspendLayout();
@@ -576,15 +581,16 @@ namespace Desktop_Calculator
             this.MenuIcon.Text = "☰";
             this.MenuIcon.Click += new System.EventHandler(this.MenuIcon_Click);
             // 
-            // richTextBox1
+            // HistDisplay
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(412, 34);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(294, 424);
-            this.richTextBox1.TabIndex = 89;
-            this.richTextBox1.Text = "";
+            this.HistDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.HistDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.HistDisplay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HistDisplay.Location = new System.Drawing.Point(412, 48);
+            this.HistDisplay.Name = "HistDisplay";
+            this.HistDisplay.Size = new System.Drawing.Size(294, 410);
+            this.HistDisplay.TabIndex = 89;
+            this.HistDisplay.Text = "There\'s no history yet";
             // 
             // ClearHistBTN
             // 
@@ -595,6 +601,7 @@ namespace Desktop_Calculator
             this.ClearHistBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ClearHistBTN.TabIndex = 90;
             this.ClearHistBTN.TabStop = false;
+            this.ClearHistBTN.Visible = false;
             // 
             // OnTopBTN
             // 
@@ -607,15 +614,77 @@ namespace Desktop_Calculator
             this.OnTopBTN.TabStop = false;
             this.OnTopBTN.Click += new System.EventHandler(this.OnTopBTN_Click);
             // 
+            // HistoryLBL
+            // 
+            this.HistoryLBL.AutoSize = true;
+            this.HistoryLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HistoryLBL.Location = new System.Drawing.Point(412, 7);
+            this.HistoryLBL.Name = "HistoryLBL";
+            this.HistoryLBL.Size = new System.Drawing.Size(66, 23);
+            this.HistoryLBL.TabIndex = 92;
+            this.HistoryLBL.Text = "History";
+            this.HistoryLBL.Click += new System.EventHandler(this.HistoryLBL_Click);
+            // 
+            // MemoryLBL
+            // 
+            this.MemoryLBL.AutoSize = true;
+            this.MemoryLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MemoryLBL.Location = new System.Drawing.Point(484, 7);
+            this.MemoryLBL.Name = "MemoryLBL";
+            this.MemoryLBL.Size = new System.Drawing.Size(76, 23);
+            this.MemoryLBL.TabIndex = 93;
+            this.MemoryLBL.Text = "Memory";
+            this.MemoryLBL.Click += new System.EventHandler(this.MemoryLBL_Click);
+            // 
+            // HighlightHIST
+            // 
+            this.HighlightHIST.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.HighlightHIST.FlatAppearance.BorderSize = 0;
+            this.HighlightHIST.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HighlightHIST.Location = new System.Drawing.Point(412, 31);
+            this.HighlightHIST.Name = "HighlightHIST";
+            this.HighlightHIST.Size = new System.Drawing.Size(66, 5);
+            this.HighlightHIST.TabIndex = 94;
+            this.HighlightHIST.UseVisualStyleBackColor = false;
+            // 
+            // HighlightMEM
+            // 
+            this.HighlightMEM.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.HighlightMEM.FlatAppearance.BorderSize = 0;
+            this.HighlightMEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HighlightMEM.Location = new System.Drawing.Point(484, 31);
+            this.HighlightMEM.Name = "HighlightMEM";
+            this.HighlightMEM.Size = new System.Drawing.Size(76, 5);
+            this.HighlightMEM.TabIndex = 95;
+            this.HighlightMEM.UseVisualStyleBackColor = false;
+            this.HighlightMEM.Visible = false;
+            // 
+            // MemDisp
+            // 
+            this.MemDisp.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MemDisp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MemDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MemDisp.Location = new System.Drawing.Point(412, 48);
+            this.MemDisp.Name = "MemDisp";
+            this.MemDisp.Size = new System.Drawing.Size(294, 410);
+            this.MemDisp.TabIndex = 96;
+            this.MemDisp.Text = "There\'s no memory yet";
+            this.MemDisp.Visible = false;
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(711, 497);
+            this.Controls.Add(this.MemDisp);
+            this.Controls.Add(this.HighlightMEM);
+            this.Controls.Add(this.HighlightHIST);
+            this.Controls.Add(this.MemoryLBL);
+            this.Controls.Add(this.HistoryLBL);
             this.Controls.Add(this.OnTopBTN);
             this.Controls.Add(this.ClearHistBTN);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.HistDisplay);
             this.Controls.Add(this.MenuIcon);
             this.Controls.Add(this.Memory);
             this.Controls.Add(this.MEMSaveBTN);
@@ -702,9 +771,14 @@ namespace Desktop_Calculator
         public System.Windows.Forms.Button EqualBTN;
         public System.Windows.Forms.TextBox ValueBox;
         public System.Windows.Forms.TextBox EquationBox;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox HistDisplay;
         private System.Windows.Forms.PictureBox ClearHistBTN;
         private System.Windows.Forms.PictureBox OnTopBTN;
+        private System.Windows.Forms.Label HistoryLBL;
+        private System.Windows.Forms.Label MemoryLBL;
+        private System.Windows.Forms.Button HighlightHIST;
+        private System.Windows.Forms.Button HighlightMEM;
+        private System.Windows.Forms.RichTextBox MemDisp;
     }
 }
 

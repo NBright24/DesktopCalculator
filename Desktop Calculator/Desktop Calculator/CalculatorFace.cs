@@ -17,7 +17,7 @@ namespace Desktop_Calculator
         string Operation = "";
         bool ValEnter = false;
         string Val1, Val2;
-
+        bool HistorySelect = true;
 
         public Window()
         {
@@ -161,6 +161,25 @@ namespace Desktop_Calculator
             NewFeature();
         }
 
+        private void HistoryLBL_Click(object sender, EventArgs e)
+        {
+            HistorySelect = true;
+
+            HighlightHIST.Visible = true;
+            HighlightMEM.Visible = false;
+            HistDisplay.Visible = true;
+            MemDisp.Visible = false;
+        }
+
+        private void MemoryLBL_Click(object sender, EventArgs e)
+        {
+            HistorySelect = false;
+
+            HighlightHIST.Visible = false;
+            HighlightMEM.Visible = true;
+            HistDisplay.Visible = false;
+            MemDisp.Visible = true;
+        }
 
 
         // FUNCTION METHODS SECTION
@@ -240,15 +259,9 @@ namespace Desktop_Calculator
             Result = Double.Parse(ValueBox.Text);
             Operation = "";
 
-            string ValueHist;
-            ValueHist = Val1 + " " + Val2 + " = " + "\n" + "\t" + ValueBox.Text + "\n\n";
-
-            MessageBox.Show(ValueHist);
+            ClearHistBTN.Visible = true;
 
            
-            //SAMPLE
-            
-            //SAMPLE
         }
 
         private void BackSpace()
@@ -264,7 +277,6 @@ namespace Desktop_Calculator
             }
         }
 
-        
         private void NewFeature()
         {
             MessageBox.Show("Feature coming soon!", "Stay Tuned!", MessageBoxButtons.OK, MessageBoxIcon.Information);
