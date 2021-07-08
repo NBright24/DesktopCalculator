@@ -180,7 +180,7 @@ namespace Desktop_Calculator
             }
         }
 
-        private void ArithOp(String X)
+        public void ArithOp(String X)
         {
             if (Result != 0)
             {
@@ -198,7 +198,7 @@ namespace Desktop_Calculator
             }
         }
 
-        private void Compute()
+        public void Compute()
         {
             EquationBox.Text = "";
 
@@ -240,6 +240,12 @@ namespace Desktop_Calculator
         private void MenuIcon_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Feature coming soon!", "Stay Tuned!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void HistoryBTN_Click(object sender, EventArgs e)
+        {
+            Form History = new HistoryWindow();
+            History.ShowDialog();
         }
     }
 }

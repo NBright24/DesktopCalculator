@@ -16,5 +16,10 @@ namespace Desktop_Calculator
         {
             InitializeComponent();
         }
+
+        private void MemoryDisplay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

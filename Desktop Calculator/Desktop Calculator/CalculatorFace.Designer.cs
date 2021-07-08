@@ -65,6 +65,8 @@ namespace Desktop_Calculator
             this.MEMSaveBTN = new System.Windows.Forms.Button();
             this.Memory = new System.Windows.Forms.Button();
             this.MenuIcon = new System.Windows.Forms.Label();
+            this.HistoryBTN = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryBTN)).BeginInit();
             this.SuspendLayout();
             // 
             // PosNegBTN
@@ -470,7 +472,7 @@ namespace Desktop_Calculator
             // 
             this.CalculatorLabel.AutoSize = true;
             this.CalculatorLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CalculatorLabel.Location = new System.Drawing.Point(39, 1);
+            this.CalculatorLabel.Location = new System.Drawing.Point(32, 1);
             this.CalculatorLabel.Name = "CalculatorLabel";
             this.CalculatorLabel.Size = new System.Drawing.Size(99, 30);
             this.CalculatorLabel.TabIndex = 81;
@@ -483,7 +485,7 @@ namespace Desktop_Calculator
             this.MEMClearBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMClearBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMClearBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMClearBTN.Location = new System.Drawing.Point(3, 118);
+            this.MEMClearBTN.Location = new System.Drawing.Point(4, 118);
             this.MEMClearBTN.Name = "MEMClearBTN";
             this.MEMClearBTN.Size = new System.Drawing.Size(62, 27);
             this.MEMClearBTN.TabIndex = 82;
@@ -497,7 +499,7 @@ namespace Desktop_Calculator
             this.MEMRecallBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMRecallBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMRecallBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMRecallBTN.Location = new System.Drawing.Point(71, 118);
+            this.MEMRecallBTN.Location = new System.Drawing.Point(73, 118);
             this.MEMRecallBTN.Name = "MEMRecallBTN";
             this.MEMRecallBTN.Size = new System.Drawing.Size(60, 27);
             this.MEMRecallBTN.TabIndex = 83;
@@ -511,7 +513,7 @@ namespace Desktop_Calculator
             this.MEMAddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMAddBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMAddBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMAddBTN.Location = new System.Drawing.Point(137, 118);
+            this.MEMAddBTN.Location = new System.Drawing.Point(139, 118);
             this.MEMAddBTN.Name = "MEMAddBTN";
             this.MEMAddBTN.Size = new System.Drawing.Size(59, 27);
             this.MEMAddBTN.TabIndex = 84;
@@ -525,7 +527,7 @@ namespace Desktop_Calculator
             this.MEMSubtractBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMSubtractBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMSubtractBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMSubtractBTN.Location = new System.Drawing.Point(202, 118);
+            this.MEMSubtractBTN.Location = new System.Drawing.Point(204, 118);
             this.MEMSubtractBTN.Name = "MEMSubtractBTN";
             this.MEMSubtractBTN.Size = new System.Drawing.Size(61, 27);
             this.MEMSubtractBTN.TabIndex = 85;
@@ -539,7 +541,7 @@ namespace Desktop_Calculator
             this.MEMSaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMSaveBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMSaveBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMSaveBTN.Location = new System.Drawing.Point(269, 118);
+            this.MEMSaveBTN.Location = new System.Drawing.Point(270, 118);
             this.MEMSaveBTN.Name = "MEMSaveBTN";
             this.MEMSaveBTN.Size = new System.Drawing.Size(66, 27);
             this.MEMSaveBTN.TabIndex = 86;
@@ -571,12 +573,25 @@ namespace Desktop_Calculator
             this.MenuIcon.Text = "☰";
             this.MenuIcon.Click += new System.EventHandler(this.MenuIcon_Click);
             // 
+            // HistoryBTN
+            // 
+            this.HistoryBTN.Image = ((System.Drawing.Image)(resources.GetObject("HistoryBTN.Image")));
+            this.HistoryBTN.InitialImage = ((System.Drawing.Image)(resources.GetObject("HistoryBTN.InitialImage")));
+            this.HistoryBTN.Location = new System.Drawing.Point(378, 3);
+            this.HistoryBTN.Name = "HistoryBTN";
+            this.HistoryBTN.Size = new System.Drawing.Size(28, 28);
+            this.HistoryBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.HistoryBTN.TabIndex = 89;
+            this.HistoryBTN.TabStop = false;
+            this.HistoryBTN.Click += new System.EventHandler(this.HistoryBTN_Click);
+            // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(409, 497);
+            this.Controls.Add(this.HistoryBTN);
             this.Controls.Add(this.MenuIcon);
             this.Controls.Add(this.Memory);
             this.Controls.Add(this.MEMSaveBTN);
@@ -620,6 +635,7 @@ namespace Desktop_Calculator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryBTN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,6 +677,7 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button MEMSaveBTN;
         private System.Windows.Forms.Button Memory;
         private System.Windows.Forms.Label MenuIcon;
+        private System.Windows.Forms.PictureBox HistoryBTN;
     }
 }
 

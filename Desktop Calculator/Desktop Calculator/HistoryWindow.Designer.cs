@@ -30,33 +30,33 @@ namespace Desktop_Calculator
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryWindow));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.MemoryDisplay = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // MemoryDisplay
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 5);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(403, 462);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.MemoryDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.MemoryDisplay.Location = new System.Drawing.Point(3, 5);
+            this.MemoryDisplay.Name = "MemoryDisplay";
+            this.MemoryDisplay.ReadOnly = true;
+            this.MemoryDisplay.Size = new System.Drawing.Size(403, 398);
+            this.MemoryDisplay.TabIndex = 0;
+            this.MemoryDisplay.Text = "";
+            this.MemoryDisplay.TextChanged += new System.EventHandler(this.MemoryDisplay_TextChanged);
             // 
-            // MemoryWindow
+            // HistoryWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(409, 497);
-            this.Controls.Add(this.richTextBox1);
-            this.Enabled = false;
+            this.ClientSize = new System.Drawing.Size(409, 437);
+            this.Controls.Add(this.MemoryDisplay);
             this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MemoryWindow";
+            this.Name = "HistoryWindow";
             this.Opacity = 0.98D;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -67,6 +67,6 @@ namespace Desktop_Calculator
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox MemoryDisplay;
     }
 }
