@@ -38,17 +38,17 @@ namespace Desktop_Calculator
 
         private void OneBTN_Click(object sender, EventArgs e)
         {
-            DisplayNum(sender, OneBTN);
+            DisplayNum("1");
         }
 
         private void TwoBTN_Click(object sender, EventArgs e)
         {
-
+            DisplayNum("2");
         }
 
         private void ThreeBTN_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void FourBTN_Click(object sender, EventArgs e)
@@ -86,6 +86,11 @@ namespace Desktop_Calculator
 
         }
 
+        private void PointBTN_Click(object sender, EventArgs e)
+        {
+            DisplayNum(".");
+        }
+
         private void PlusBTN_Click(object sender, EventArgs e)
         {
             Operations("+");
@@ -106,30 +111,9 @@ namespace Desktop_Calculator
             Operations("/");
         }
 
-        private void PointBTN_Click(object sender, EventArgs e)
-        {
-            //if (ValueBox.Text.Contains("."))
-            //{
-
-            //}
-            //else
-            //{
-            //    if (ValueBox.Text == "")
-            //    {
-            //        DisplayNum("0");
-            //        DisplayNum(".");
-            //    }
-            //    else
-            //        DisplayNum(".");
-            //}
-        }
-
         private void PosNegBTN_Click(object sender, EventArgs e)
         {
-            if (ValueBox.Text.Contains("-"))
-            {
-
-            }
+            
         }
 
         private void SqrtBTN_Click(object sender, EventArgs e)
@@ -175,13 +159,13 @@ namespace Desktop_Calculator
         //IF SHIT DID NOT WORK, DISABLE KEYBOARD INPUT
         private void ValueBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (ValueBox.Text == "")
-            {
-                DisplayNum("0");
-                CharCheckKey(sender, e);
-            }
-            else
-                CharCheckKey(sender, e);
+            //if (ValueBox.Text == "")
+            //{
+            //    DisplayNum("0");
+            //    CharCheckKey(sender, e);
+            //}
+            //else
+            //    CharCheckKey(sender, e);
         }
 
         private void CharCheckKey(object sender, KeyPressEventArgs e)
@@ -201,69 +185,82 @@ namespace Desktop_Calculator
             }
         }
 
-        private void DisplayNum(object X, Button Y)
+        private void DisplayNum(string Y)
         {
-            //Y = (Button)sender;
+            //Button Y = (Button)sender;
 
-            if ((ValueBox.Text == "0") || (ValEnter))
-            {
-                ValueBox.Text = "";
-                ValEnter = false;
-            }
-            if (e)
+            //if ((ValueBox.Text == "0") || (ValEnter))
+            //{
+            //    ValueBox.Text = "";
+            //    ValEnter = false;
+            //    ValueBox.Text += Y;
+            //}
+            ValueBox.Text += Y;
+
+            //if (Y == ".")
+            //{
+            //    if (ValueBox.Text.Contains("."))
+            //    {
+            //        ValueBox.Text += Y;
+            //    }
+            //}
+            //else
+            //{
+            //    ValueBox.Text += Y;
+            //}
         }
 
         private void Operations(string Y)
         {
-            OpValue1 = UserVal;
-            Operation = Y;
-            UserVal = string.Empty;
-            //Temporary
-            ValueBox.Text = string.Empty;
+            //OpValue1 = UserVal;
+            //Operation = Y;
+            //UserVal = string.Empty;
+            ////Temporary
+            //ValueBox.Text = string.Empty;
         }
 
         private void ClearAll()
         {
-            ValueBox.Text = "";
-            UserVal = string.Empty;
-            OpValue1 = string.Empty;
-            OpValue2 = string.Empty;
+            //ValueBox.Text = "";
+            //UserVal = string.Empty;
+            //OpValue1 = string.Empty;
+            //OpValue2 = string.Empty;
         }
 
         private void Compute()
         {
-            OpValue2 = UserVal;
-            double Val1, Val2;
-            double.TryParse(OpValue1, out Val1);
-            double.TryParse(OpValue2, out Val2);
+            //OpValue2 = UserVal;
+            //double Val1, Val2;
+            //double.TryParse(OpValue1, out Val1);
+            //double.TryParse(OpValue2, out Val2);
 
-            if (Operation == "*")
-            {
-                Result = Val1 * Val2;
-                ValueBox.Text = Result.ToString();
-            }
-            if (Operation == "/")
-            {
-                if(Val2 != 0)
-                {
-                    Result = Val1 / Val2;
-                    ValueBox.Text = Result.ToString();
-                }
-                else
-                {
-                    ValueBox.Text = "Math Error";
-                }
-            }
-            if (Operation == "+")
-            {
-                Result = Val1 + Val2;
-                ValueBox.Text = Result.ToString();
-            }
-            if (Operation == "-")
-            {
-                Result = Val1 - Val2;
-                ValueBox.Text = Result.ToString();
-            }
+            //if (Operation == "*")
+            //{
+            //    Result = Val1 * Val2;
+            //    ValueBox.Text = Result.ToString();
+            //}
+            //if (Operation == "/")
+            //{
+            //    if(Val2 != 0)
+            //    {
+            //        Result = Val1 / Val2;
+            //        ValueBox.Text = Result.ToString();
+            //    }
+            //    else
+            //    {
+            //        ValueBox.Text = "Math Error";
+            //    }
+            //}
+            //if (Operation == "+")
+            //{
+            //    Result = Val1 + Val2;
+            //    ValueBox.Text = Result.ToString();
+            //}
+            //if (Operation == "-")
+            //{
+            //    Result = Val1 - Val2;
+            //    ValueBox.Text = Result.ToString();
+            //}
         }
     }
 }

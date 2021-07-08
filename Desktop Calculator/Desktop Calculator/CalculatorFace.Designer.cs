@@ -121,7 +121,6 @@ namespace Desktop_Calculator
             this.PointBTN.TabIndex = 56;
             this.PointBTN.Text = ".";
             this.PointBTN.UseVisualStyleBackColor = false;
-            this.PointBTN.Click += new System.EventHandler(this.PointBTN_Click);
             // 
             // ThreeBTN
             // 
