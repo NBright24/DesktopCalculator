@@ -140,6 +140,7 @@ namespace Desktop_Calculator
 
         private void ClearBTN_Click(object sender, EventArgs e)
         {
+            EquationBox.Text = "";
             ValueBox.Text = "0";
             Result = 0;
         }
@@ -212,7 +213,7 @@ namespace Desktop_Calculator
                 case "×":
                     ValueBox.Text = ((Result * Double.Parse(ValueBox.Text))).ToString();
                     break;
-                case "/":
+                case "÷":
                     ValueBox.Text = ((Result / Double.Parse(ValueBox.Text))).ToString();
                     break;
                 default:
