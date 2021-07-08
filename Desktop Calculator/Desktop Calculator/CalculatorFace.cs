@@ -16,7 +16,7 @@ namespace Desktop_Calculator
         double Result = 0;
         string Operation = "";
         bool ValEnter = false;
-        char Operator;
+        string Val1, Val2;
 
         public Window()
         {
@@ -180,7 +180,7 @@ namespace Desktop_Calculator
             }
         }
 
-        public void ArithOp(String X)
+        private void ArithOp(String X)
         {
             if (Result != 0)
             {
@@ -196,10 +196,14 @@ namespace Desktop_Calculator
                 ValueBox.Text = "";
                 EquationBox.Text = Convert.ToString(Result) + " " + Operation;
             }
+
+            Val1 = EquationBox.Text;
         }
 
-        public void Compute()
+        private void Compute()
         {
+            Val2 = ValueBox.Text;
+
             EquationBox.Text = "";
 
             switch(Operation)
@@ -222,6 +226,17 @@ namespace Desktop_Calculator
 
             Result = Double.Parse(ValueBox.Text);
             Operation = "";
+
+            string ValueHist;
+            ValueHist = Val1 + " " + Val2 + " = " + "\n" + "\t" + ValueBox.Text + "\n\n";
+
+            MessageBox.Show(ValueHist);
+
+
+
+            //SAMPLE
+            
+            //SAMPLE
         }
 
         private void BackSpace()
@@ -245,7 +260,11 @@ namespace Desktop_Calculator
         private void HistoryBTN_Click(object sender, EventArgs e)
         {
             Form History = new HistoryWindow();
-            History.ShowDialog();
+            History.Show();
         }
+
+
+
+       
     }
 }

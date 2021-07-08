@@ -643,7 +643,6 @@ namespace Desktop_Calculator
 
         #endregion
         private System.Windows.Forms.Button PosNegBTN;
-        private System.Windows.Forms.Button EqualBTN;
         private System.Windows.Forms.Button ZeroBTN;
         private System.Windows.Forms.Button PointBTN;
         private System.Windows.Forms.Button ThreeBTN;
@@ -666,8 +665,6 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button ClearEntryBTN;
         private System.Windows.Forms.Button BackSpaceBTN;
         private System.Windows.Forms.Button PercentBTN;
-        private System.Windows.Forms.TextBox ValueBox;
-        private System.Windows.Forms.TextBox EquationBox;
         private System.Windows.Forms.Label TypeLabel;
         private System.Windows.Forms.Label CalculatorLabel;
         private System.Windows.Forms.Button MEMClearBTN;
@@ -678,6 +675,9 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button Memory;
         private System.Windows.Forms.Label MenuIcon;
         private System.Windows.Forms.PictureBox HistoryBTN;
+        public System.Windows.Forms.Button EqualBTN;
+        public System.Windows.Forms.TextBox ValueBox;
+        public System.Windows.Forms.TextBox EquationBox;
     }
 }
 
