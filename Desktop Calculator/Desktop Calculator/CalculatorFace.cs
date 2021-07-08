@@ -150,7 +150,17 @@ namespace Desktop_Calculator
 
         private void PercentBTN_Click(object sender, EventArgs e)
         {
-
+            //METHOD THIS
+            if (EquationBox.Text != "")
+            {
+                Result = Double.Parse(ValueBox.Text);
+                ValueBox.Text = (Result / 100).ToString();
+            }
+            else
+            {
+                ValueBox.Text = "0";
+                Result = Double.Parse(ValueBox.Text);
+            }
         }
 
         private void ClearEntryBTN_Click(object sender, EventArgs e)
