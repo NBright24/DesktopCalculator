@@ -86,7 +86,17 @@ namespace Desktop_Calculator
 
         private void PosNegBTN_Click(object sender, EventArgs e)
         {
-
+            //METHOD THIS
+            if (Double.Parse(ValueBox.Text) >= 0)
+            {
+                Result = Double.Parse(ValueBox.Text);
+                ValueBox.Text = (Result - Result).ToString();
+            }
+            if (Double.Parse(ValueBox.Text) <= 0)
+            {
+                Result = Double.Parse(ValueBox.Text);
+                ValueBox.Text = (Result + Result).ToString();
+            }
         }
 
         private void AddBTN_Click(object sender, EventArgs e)
