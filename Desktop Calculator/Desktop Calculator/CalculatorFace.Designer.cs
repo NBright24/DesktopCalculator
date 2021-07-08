@@ -66,8 +66,10 @@ namespace Desktop_Calculator
             this.Memory = new System.Windows.Forms.Button();
             this.MenuIcon = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ClearHistBTN = new System.Windows.Forms.PictureBox();
+            this.OnTopBTN = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.ClearHistBTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OnTopBTN)).BeginInit();
             this.SuspendLayout();
             // 
             // PosNegBTN
@@ -473,7 +475,7 @@ namespace Desktop_Calculator
             // 
             this.CalculatorLabel.AutoSize = true;
             this.CalculatorLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CalculatorLabel.Location = new System.Drawing.Point(32, 1);
+            this.CalculatorLabel.Location = new System.Drawing.Point(33, 1);
             this.CalculatorLabel.Name = "CalculatorLabel";
             this.CalculatorLabel.Size = new System.Drawing.Size(99, 30);
             this.CalculatorLabel.TabIndex = 81;
@@ -584,15 +586,26 @@ namespace Desktop_Calculator
             this.richTextBox1.TabIndex = 89;
             this.richTextBox1.Text = "";
             // 
-            // pictureBox1
+            // ClearHistBTN
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(678, 464);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 90;
-            this.pictureBox1.TabStop = false;
+            this.ClearHistBTN.Image = ((System.Drawing.Image)(resources.GetObject("ClearHistBTN.Image")));
+            this.ClearHistBTN.Location = new System.Drawing.Point(678, 464);
+            this.ClearHistBTN.Name = "ClearHistBTN";
+            this.ClearHistBTN.Size = new System.Drawing.Size(28, 28);
+            this.ClearHistBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClearHistBTN.TabIndex = 90;
+            this.ClearHistBTN.TabStop = false;
+            // 
+            // OnTopBTN
+            // 
+            this.OnTopBTN.Image = ((System.Drawing.Image)(resources.GetObject("OnTopBTN.Image")));
+            this.OnTopBTN.Location = new System.Drawing.Point(139, 3);
+            this.OnTopBTN.Name = "OnTopBTN";
+            this.OnTopBTN.Size = new System.Drawing.Size(28, 28);
+            this.OnTopBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.OnTopBTN.TabIndex = 91;
+            this.OnTopBTN.TabStop = false;
+            this.OnTopBTN.Click += new System.EventHandler(this.OnTopBTN_Click);
             // 
             // Window
             // 
@@ -600,7 +613,8 @@ namespace Desktop_Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(711, 497);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.OnTopBTN);
+            this.Controls.Add(this.ClearHistBTN);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.MenuIcon);
             this.Controls.Add(this.Memory);
@@ -645,7 +659,8 @@ namespace Desktop_Calculator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClearHistBTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OnTopBTN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -688,7 +703,8 @@ namespace Desktop_Calculator
         public System.Windows.Forms.TextBox ValueBox;
         public System.Windows.Forms.TextBox EquationBox;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ClearHistBTN;
+        private System.Windows.Forms.PictureBox OnTopBTN;
     }
 }
 

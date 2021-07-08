@@ -151,8 +151,20 @@ namespace Desktop_Calculator
             BackSpace();
         }
 
+        private void MenuIcon_Click(object sender, EventArgs e)
+        {
+            NewFeature();
+        }
+
+        private void OnTopBTN_Click(object sender, EventArgs e)
+        {
+            NewFeature();
+        }
 
 
+
+        // FUNCTION METHODS SECTION
+        // DON'T FORGET TO CLEAN THE CODE BEFORE PRESENTATION
         private void NumDisp(string X)
         {
             if ((ValueBox.Text == "0") || (ValEnter))
@@ -252,7 +264,8 @@ namespace Desktop_Calculator
             }
         }
 
-        private void MenuIcon_Click(object sender, EventArgs e)
+        
+        private void NewFeature()
         {
             MessageBox.Show("Feature coming soon!", "Stay Tuned!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
