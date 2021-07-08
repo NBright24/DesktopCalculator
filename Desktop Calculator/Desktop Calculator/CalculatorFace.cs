@@ -18,6 +18,7 @@ namespace Desktop_Calculator
         bool ValEnter = false;
         string Val1, Val2;
 
+
         public Window()
         {
             InitializeComponent();
@@ -200,7 +201,7 @@ namespace Desktop_Calculator
             Val1 = EquationBox.Text;
         }
 
-        private void Compute()
+        public void Compute()
         {
             Val2 = ValueBox.Text;
 
@@ -232,8 +233,7 @@ namespace Desktop_Calculator
 
             MessageBox.Show(ValueHist);
 
-
-
+           
             //SAMPLE
             
             //SAMPLE
@@ -256,15 +256,5 @@ namespace Desktop_Calculator
         {
             MessageBox.Show("Feature coming soon!", "Stay Tuned!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void HistoryBTN_Click(object sender, EventArgs e)
-        {
-            Form History = new HistoryWindow();
-            History.Show();
-        }
-
-
-
-       
     }
 }

@@ -65,8 +65,9 @@ namespace Desktop_Calculator
             this.MEMSaveBTN = new System.Windows.Forms.Button();
             this.Memory = new System.Windows.Forms.Button();
             this.MenuIcon = new System.Windows.Forms.Label();
-            this.HistoryBTN = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.HistoryBTN)).BeginInit();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PosNegBTN
@@ -573,25 +574,34 @@ namespace Desktop_Calculator
             this.MenuIcon.Text = "☰";
             this.MenuIcon.Click += new System.EventHandler(this.MenuIcon_Click);
             // 
-            // HistoryBTN
+            // richTextBox1
             // 
-            this.HistoryBTN.Image = ((System.Drawing.Image)(resources.GetObject("HistoryBTN.Image")));
-            this.HistoryBTN.InitialImage = ((System.Drawing.Image)(resources.GetObject("HistoryBTN.InitialImage")));
-            this.HistoryBTN.Location = new System.Drawing.Point(378, 3);
-            this.HistoryBTN.Name = "HistoryBTN";
-            this.HistoryBTN.Size = new System.Drawing.Size(28, 28);
-            this.HistoryBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.HistoryBTN.TabIndex = 89;
-            this.HistoryBTN.TabStop = false;
-            this.HistoryBTN.Click += new System.EventHandler(this.HistoryBTN_Click);
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Location = new System.Drawing.Point(412, 34);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(294, 424);
+            this.richTextBox1.TabIndex = 89;
+            this.richTextBox1.Text = "";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(678, 464);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 90;
+            this.pictureBox1.TabStop = false;
             // 
             // Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(409, 497);
-            this.Controls.Add(this.HistoryBTN);
+            this.ClientSize = new System.Drawing.Size(711, 497);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.MenuIcon);
             this.Controls.Add(this.Memory);
             this.Controls.Add(this.MEMSaveBTN);
@@ -635,7 +645,7 @@ namespace Desktop_Calculator
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.HistoryBTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -674,10 +684,11 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button MEMSaveBTN;
         private System.Windows.Forms.Button Memory;
         private System.Windows.Forms.Label MenuIcon;
-        private System.Windows.Forms.PictureBox HistoryBTN;
         public System.Windows.Forms.Button EqualBTN;
         public System.Windows.Forms.TextBox ValueBox;
         public System.Windows.Forms.TextBox EquationBox;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
