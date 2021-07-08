@@ -197,7 +197,23 @@ namespace Desktop_Calculator
 
         private void Compute()
         {
+            EquationBox.Text = "";
 
+            switch(Operation)
+            {
+                case "+":
+                    ValueBox.Text = ((Result + Double.Parse(ValueBox.Text))).ToString();
+                    break;
+                case "-":
+                    ValueBox.Text = ((Result - Double.Parse(ValueBox.Text))).ToString();
+                    break;
+                case "×":
+                    ValueBox.Text = ((Result * Double.Parse(ValueBox.Text))).ToString();
+                    break;
+                case "/":
+                    ValueBox.Text = ((Result / Double.Parse(ValueBox.Text))).ToString();
+                    break;
+            }
         }
     }
 }
