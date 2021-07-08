@@ -16,6 +16,7 @@ namespace Desktop_Calculator
         double Result = 0;
         string Operation = "";
         bool ValEnter = false;
+        double ExtraVal = 0;
         string Val1, Val2;
         bool HistorySelect = true;
 
@@ -112,11 +113,18 @@ namespace Desktop_Calculator
         private void EqualBTN_Click(object sender, EventArgs e)
         {
             Compute();
+            HistoryAdd();
         }
 
         private void FractionBTN_Click(object sender, EventArgs e)
         {
+            //METHOD THIS
+            ExtraVal = double.Parse(ValueBox.Text);
+            EquationBox.Text = "1 /" + ExtraVal.ToString();
+            ValueBox.Text = (1 / ExtraVal).ToString();
+            Result = Double.Parse(ValueBox.Text);
 
+            HistoryAdd();
         }
 
         private void SquareBTN_Click(object sender, EventArgs e)
@@ -195,7 +203,13 @@ namespace Desktop_Calculator
 
         private void ClearHistBTN_Click(object sender, EventArgs e)
         {
-
+            HistDisplay.Clear();
+            if (HistDisplay.Text == "")
+            {
+                HistDisplay.Text = "There's no history yet";
+            }
+            ClearHistBTN.Visible = false;
+            HistDisplay.ScrollBars = 0;
         }
 
         private void ClearMEMBTN_Click(object sender, EventArgs e)
@@ -252,12 +266,11 @@ namespace Desktop_Calculator
                 EquationBox.Text = Convert.ToString(Result) + " " + Operation;
             }
 
-            Val1 = EquationBox.Text;
         }
 
         public void Compute()
         {
-            Val2 = ValueBox.Text;
+            Val1 = EquationBox.Text;
 
             EquationBox.Text = "";
 
@@ -282,17 +295,21 @@ namespace Desktop_Calculator
             Result = Double.Parse(ValueBox.Text);
             Operation = "";
 
+        }
+
+        private void HistoryAdd()
+        {
+            Val2 = ValueBox.Text;
+
             ClearHistBTN.Visible = true;
 
             if (HistDisplay.Text == "There's no history yet")
             {
-                HistDisplay.Text = ""; 
+                HistDisplay.Text = "";
             }
 
             HistDisplay.AppendText(Val1 + " " + Val2 + " = " + "\n");
             HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
-            EquationBox.Text = "";
-           
         }
 
         private void BackSpace()
