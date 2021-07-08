@@ -236,7 +236,13 @@ namespace Desktop_Calculator
 
         private void ClearMEMBTN_Click(object sender, EventArgs e)
         {
-
+            MemDisp.Clear();
+            if (MemDisp.Text == "")
+            {
+                MemDisp.Text = "There's no memory yet";
+            }
+            ClearMEMBTN.Visible = false;
+            MemDisp.ScrollBars = 0;
         }
         private void MEMRecallBTN_Click(object sender, EventArgs e)
         {
