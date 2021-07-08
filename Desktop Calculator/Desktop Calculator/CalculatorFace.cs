@@ -142,7 +142,10 @@ namespace Desktop_Calculator
         private void SqrtBTN_Click(object sender, EventArgs e)
         {
             //METHOD THIS
-
+            EquationBox.Text = "";
+            Result = double.Parse(ValueBox.Text);
+            EquationBox.Text = "√" + Result;
+            ValueBox.Text = (Math.Sqrt(Result)).ToString();
         }
 
         private void PercentBTN_Click(object sender, EventArgs e)
