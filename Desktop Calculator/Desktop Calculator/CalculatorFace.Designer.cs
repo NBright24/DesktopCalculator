@@ -605,6 +605,7 @@ namespace Desktop_Calculator
             this.ClearHistBTN.TabIndex = 90;
             this.ClearHistBTN.TabStop = false;
             this.ClearHistBTN.Visible = false;
+            this.ClearHistBTN.Click += new System.EventHandler(this.ClearHistBTN_Click);
             // 
             // OnTopBTN
             // 
@@ -685,6 +686,7 @@ namespace Desktop_Calculator
             this.ClearMEMBTN.TabIndex = 97;
             this.ClearMEMBTN.TabStop = false;
             this.ClearMEMBTN.Visible = false;
+            this.ClearMEMBTN.Click += new System.EventHandler(this.ClearMEMBTN_Click);
             // 
             // Window
             // 

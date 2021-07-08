@@ -193,6 +193,17 @@ namespace Desktop_Calculator
             }
         }
 
+        private void ClearHistBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearMEMBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         // FUNCTION METHODS SECTION
         // DON'T FORGET TO CLEAN THE CODE BEFORE PRESENTATION
@@ -273,6 +284,9 @@ namespace Desktop_Calculator
 
             ClearHistBTN.Visible = true;
 
+            HistDisplay.AppendText(Val1 + " " + Val2 + " = " + "\n");
+            HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
+            HistDisplay.Text = "";
            
         }
 
