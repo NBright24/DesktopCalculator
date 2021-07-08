@@ -146,8 +146,10 @@ namespace Desktop_Calculator
 
         private void BackSpaceBTN_Click(object sender, EventArgs e)
         {
-
+            BackSpace();
         }
+
+
 
         private void NumDisp(string X)
         {
@@ -219,6 +221,19 @@ namespace Desktop_Calculator
 
             Result = Double.Parse(ValueBox.Text);
             Operation = "";
+        }
+
+        private void BackSpace()
+        {
+            if (ValueBox.Text.Length > 0)
+            {
+                ValueBox.Text = ValueBox.Text.Remove(ValueBox.Text.Length - 1, 1);
+            }
+
+            if (ValueBox.Text == "")
+            {
+                ValueBox.Text = "0";
+            }
         }
     }
 }
