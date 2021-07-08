@@ -74,4 +74,4 @@ D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\
 D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\ref\Desktop Calculator.dll
 D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.pdb
 D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop Calculator.genruntimeconfig.cache
-D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop_Calculator.Form1.resources
+D:\Program Files\GitHub\DesktopCalculator\Desktop Calculator\Desktop Calculator\obj\Debug\net5.0-windows\Desktop_Calculator.MemoryWindow.resources

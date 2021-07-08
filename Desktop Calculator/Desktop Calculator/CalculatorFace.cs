@@ -236,5 +236,10 @@ namespace Desktop_Calculator
                 ValueBox.Text = "0";
             }
         }
+
+        private void MenuIcon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Feature coming soon!", "Stay Tuned!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

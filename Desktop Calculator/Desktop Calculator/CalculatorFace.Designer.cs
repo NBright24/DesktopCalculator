@@ -58,11 +58,13 @@ namespace Desktop_Calculator
             this.EquationBox = new System.Windows.Forms.TextBox();
             this.TypeLabel = new System.Windows.Forms.Label();
             this.CalculatorLabel = new System.Windows.Forms.Label();
-            this.MemoryCLRBTN = new System.Windows.Forms.Button();
-            this.MemoryRMVBTN = new System.Windows.Forms.Button();
-            this.MemoryAddBTN = new System.Windows.Forms.Button();
-            this.MemoryMinusBTN = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.MEMClearBTN = new System.Windows.Forms.Button();
+            this.MEMRecallBTN = new System.Windows.Forms.Button();
+            this.MEMAddBTN = new System.Windows.Forms.Button();
+            this.MEMSubtractBTN = new System.Windows.Forms.Button();
+            this.MEMSaveBTN = new System.Windows.Forms.Button();
+            this.Memory = new System.Windows.Forms.Button();
+            this.MenuIcon = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // PosNegBTN
@@ -468,81 +470,106 @@ namespace Desktop_Calculator
             // 
             this.CalculatorLabel.AutoSize = true;
             this.CalculatorLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.CalculatorLabel.Location = new System.Drawing.Point(3, 1);
+            this.CalculatorLabel.Location = new System.Drawing.Point(39, 1);
             this.CalculatorLabel.Name = "CalculatorLabel";
             this.CalculatorLabel.Size = new System.Drawing.Size(99, 30);
             this.CalculatorLabel.TabIndex = 81;
             this.CalculatorLabel.Text = "Standard";
             // 
-            // MemoryCLRBTN
+            // MEMClearBTN
             // 
-            this.MemoryCLRBTN.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryCLRBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryCLRBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemoryCLRBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MemoryCLRBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MemoryCLRBTN.Location = new System.Drawing.Point(3, 118);
-            this.MemoryCLRBTN.Name = "MemoryCLRBTN";
-            this.MemoryCLRBTN.Size = new System.Drawing.Size(74, 27);
-            this.MemoryCLRBTN.TabIndex = 82;
-            this.MemoryCLRBTN.Text = "MC";
-            this.MemoryCLRBTN.UseVisualStyleBackColor = false;
+            this.MEMClearBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMClearBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMClearBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MEMClearBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MEMClearBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MEMClearBTN.Location = new System.Drawing.Point(3, 118);
+            this.MEMClearBTN.Name = "MEMClearBTN";
+            this.MEMClearBTN.Size = new System.Drawing.Size(62, 27);
+            this.MEMClearBTN.TabIndex = 82;
+            this.MEMClearBTN.Text = "MC";
+            this.MEMClearBTN.UseVisualStyleBackColor = false;
             // 
-            // MemoryRMVBTN
+            // MEMRecallBTN
             // 
-            this.MemoryRMVBTN.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryRMVBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryRMVBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemoryRMVBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MemoryRMVBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MemoryRMVBTN.Location = new System.Drawing.Point(95, 118);
-            this.MemoryRMVBTN.Name = "MemoryRMVBTN";
-            this.MemoryRMVBTN.Size = new System.Drawing.Size(72, 27);
-            this.MemoryRMVBTN.TabIndex = 83;
-            this.MemoryRMVBTN.Text = "MR";
-            this.MemoryRMVBTN.UseVisualStyleBackColor = false;
+            this.MEMRecallBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMRecallBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMRecallBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MEMRecallBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MEMRecallBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MEMRecallBTN.Location = new System.Drawing.Point(71, 118);
+            this.MEMRecallBTN.Name = "MEMRecallBTN";
+            this.MEMRecallBTN.Size = new System.Drawing.Size(60, 27);
+            this.MEMRecallBTN.TabIndex = 83;
+            this.MEMRecallBTN.Text = "MR";
+            this.MEMRecallBTN.UseVisualStyleBackColor = false;
             // 
-            // MemoryAddBTN
+            // MEMAddBTN
             // 
-            this.MemoryAddBTN.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryAddBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryAddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemoryAddBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MemoryAddBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MemoryAddBTN.Location = new System.Drawing.Point(173, 118);
-            this.MemoryAddBTN.Name = "MemoryAddBTN";
-            this.MemoryAddBTN.Size = new System.Drawing.Size(71, 27);
-            this.MemoryAddBTN.TabIndex = 84;
-            this.MemoryAddBTN.Text = "M+";
-            this.MemoryAddBTN.UseVisualStyleBackColor = false;
+            this.MEMAddBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMAddBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMAddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MEMAddBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MEMAddBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MEMAddBTN.Location = new System.Drawing.Point(137, 118);
+            this.MEMAddBTN.Name = "MEMAddBTN";
+            this.MEMAddBTN.Size = new System.Drawing.Size(59, 27);
+            this.MEMAddBTN.TabIndex = 84;
+            this.MEMAddBTN.Text = "M+";
+            this.MEMAddBTN.UseVisualStyleBackColor = false;
             // 
-            // MemoryMinusBTN
+            // MEMSubtractBTN
             // 
-            this.MemoryMinusBTN.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryMinusBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.MemoryMinusBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MemoryMinusBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MemoryMinusBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MemoryMinusBTN.Location = new System.Drawing.Point(250, 118);
-            this.MemoryMinusBTN.Name = "MemoryMinusBTN";
-            this.MemoryMinusBTN.Size = new System.Drawing.Size(73, 27);
-            this.MemoryMinusBTN.TabIndex = 85;
-            this.MemoryMinusBTN.Text = "M-";
-            this.MemoryMinusBTN.UseVisualStyleBackColor = false;
+            this.MEMSubtractBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMSubtractBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMSubtractBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MEMSubtractBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MEMSubtractBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MEMSubtractBTN.Location = new System.Drawing.Point(202, 118);
+            this.MEMSubtractBTN.Name = "MEMSubtractBTN";
+            this.MEMSubtractBTN.Size = new System.Drawing.Size(61, 27);
+            this.MEMSubtractBTN.TabIndex = 85;
+            this.MEMSubtractBTN.Text = "M-";
+            this.MEMSubtractBTN.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // MEMSaveBTN
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(329, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 27);
-            this.button1.TabIndex = 86;
-            this.button1.Text = "M";
-            this.button1.UseVisualStyleBackColor = false;
+            this.MEMSaveBTN.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMSaveBTN.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.MEMSaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MEMSaveBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MEMSaveBTN.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.MEMSaveBTN.Location = new System.Drawing.Point(269, 118);
+            this.MEMSaveBTN.Name = "MEMSaveBTN";
+            this.MEMSaveBTN.Size = new System.Drawing.Size(66, 27);
+            this.MEMSaveBTN.TabIndex = 86;
+            this.MEMSaveBTN.Text = "MS";
+            this.MEMSaveBTN.UseVisualStyleBackColor = false;
+            // 
+            // Memory
+            // 
+            this.Memory.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Memory.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
+            this.Memory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Memory.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Memory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Memory.Location = new System.Drawing.Point(340, 118);
+            this.Memory.Name = "Memory";
+            this.Memory.Size = new System.Drawing.Size(66, 27);
+            this.Memory.TabIndex = 87;
+            this.Memory.Text = "M";
+            this.Memory.UseVisualStyleBackColor = false;
+            // 
+            // MenuIcon
+            // 
+            this.MenuIcon.AutoSize = true;
+            this.MenuIcon.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.MenuIcon.Location = new System.Drawing.Point(3, 1);
+            this.MenuIcon.Name = "MenuIcon";
+            this.MenuIcon.Size = new System.Drawing.Size(33, 30);
+            this.MenuIcon.TabIndex = 88;
+            this.MenuIcon.Text = "☰";
+            this.MenuIcon.Click += new System.EventHandler(this.MenuIcon_Click);
             // 
             // Window
             // 
@@ -550,11 +577,13 @@ namespace Desktop_Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(409, 497);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.MemoryMinusBTN);
-            this.Controls.Add(this.MemoryAddBTN);
-            this.Controls.Add(this.MemoryRMVBTN);
-            this.Controls.Add(this.MemoryCLRBTN);
+            this.Controls.Add(this.MenuIcon);
+            this.Controls.Add(this.Memory);
+            this.Controls.Add(this.MEMSaveBTN);
+            this.Controls.Add(this.MEMSubtractBTN);
+            this.Controls.Add(this.MEMAddBTN);
+            this.Controls.Add(this.MEMRecallBTN);
+            this.Controls.Add(this.MEMClearBTN);
             this.Controls.Add(this.CalculatorLabel);
             this.Controls.Add(this.TypeLabel);
             this.Controls.Add(this.EquationBox);
@@ -625,11 +654,13 @@ namespace Desktop_Calculator
         private System.Windows.Forms.TextBox EquationBox;
         private System.Windows.Forms.Label TypeLabel;
         private System.Windows.Forms.Label CalculatorLabel;
-        private System.Windows.Forms.Button MemoryCLRBTN;
-        private System.Windows.Forms.Button MemoryRMVBTN;
-        private System.Windows.Forms.Button MemoryAddBTN;
-        private System.Windows.Forms.Button MemoryMinusBTN;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button MEMClearBTN;
+        private System.Windows.Forms.Button MEMRecallBTN;
+        private System.Windows.Forms.Button MEMAddBTN;
+        private System.Windows.Forms.Button MEMSubtractBTN;
+        private System.Windows.Forms.Button MEMSaveBTN;
+        private System.Windows.Forms.Button Memory;
+        private System.Windows.Forms.Label MenuIcon;
     }
 }
 
