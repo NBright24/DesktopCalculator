@@ -110,7 +110,7 @@ namespace Desktop_Calculator
 
         private void EqualBTN_Click(object sender, EventArgs e)
         {
-
+            Compute();
         }
 
         private void FractionBTN_Click(object sender, EventArgs e)
@@ -193,6 +193,11 @@ namespace Desktop_Calculator
                 ValueBox.Text = "";
                 EquationBox.Text = Convert.ToString(Result) + " " + Operation;
             }
+        }
+
+        private void Compute()
+        {
+
         }
     }
 }
