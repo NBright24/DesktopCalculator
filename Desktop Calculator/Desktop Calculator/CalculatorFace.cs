@@ -169,6 +169,12 @@ namespace Desktop_Calculator
             HighlightMEM.Visible = false;
             HistDisplay.Visible = true;
             MemDisp.Visible = false;
+            ClearMEMBTN.Visible = false;
+
+            if (HistDisplay.Text != "There's no history yet")
+            {
+                ClearHistBTN.Visible = true;
+            }
         }
 
         private void MemoryLBL_Click(object sender, EventArgs e)
@@ -179,6 +185,12 @@ namespace Desktop_Calculator
             HighlightMEM.Visible = true;
             HistDisplay.Visible = false;
             MemDisp.Visible = true;
+            ClearHistBTN.Visible = false;
+
+            if (MemDisp.Text != "There's no memory yet")
+            {
+                ClearMEMBTN.Visible = true;
+            }
         }
 
 

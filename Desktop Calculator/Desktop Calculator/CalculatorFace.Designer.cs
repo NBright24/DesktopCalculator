@@ -73,8 +73,10 @@ namespace Desktop_Calculator
             this.HighlightHIST = new System.Windows.Forms.Button();
             this.HighlightMEM = new System.Windows.Forms.Button();
             this.MemDisp = new System.Windows.Forms.RichTextBox();
+            this.ClearMEMBTN = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ClearHistBTN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OnTopBTN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClearMEMBTN)).BeginInit();
             this.SuspendLayout();
             // 
             // PosNegBTN
@@ -588,6 +590,7 @@ namespace Desktop_Calculator
             this.HistDisplay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.HistDisplay.Location = new System.Drawing.Point(412, 48);
             this.HistDisplay.Name = "HistDisplay";
+            this.HistDisplay.ReadOnly = true;
             this.HistDisplay.Size = new System.Drawing.Size(294, 410);
             this.HistDisplay.TabIndex = 89;
             this.HistDisplay.Text = "There\'s no history yet";
@@ -666,10 +669,22 @@ namespace Desktop_Calculator
             this.MemDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MemDisp.Location = new System.Drawing.Point(412, 48);
             this.MemDisp.Name = "MemDisp";
+            this.MemDisp.ReadOnly = true;
             this.MemDisp.Size = new System.Drawing.Size(294, 410);
             this.MemDisp.TabIndex = 96;
             this.MemDisp.Text = "There\'s no memory yet";
             this.MemDisp.Visible = false;
+            // 
+            // ClearMEMBTN
+            // 
+            this.ClearMEMBTN.Image = ((System.Drawing.Image)(resources.GetObject("ClearMEMBTN.Image")));
+            this.ClearMEMBTN.Location = new System.Drawing.Point(678, 464);
+            this.ClearMEMBTN.Name = "ClearMEMBTN";
+            this.ClearMEMBTN.Size = new System.Drawing.Size(28, 28);
+            this.ClearMEMBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClearMEMBTN.TabIndex = 97;
+            this.ClearMEMBTN.TabStop = false;
+            this.ClearMEMBTN.Visible = false;
             // 
             // Window
             // 
@@ -677,6 +692,7 @@ namespace Desktop_Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(711, 497);
+            this.Controls.Add(this.ClearMEMBTN);
             this.Controls.Add(this.MemDisp);
             this.Controls.Add(this.HighlightMEM);
             this.Controls.Add(this.HighlightHIST);
@@ -730,6 +746,7 @@ namespace Desktop_Calculator
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ClearHistBTN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OnTopBTN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClearMEMBTN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -779,6 +796,7 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button HighlightHIST;
         private System.Windows.Forms.Button HighlightMEM;
         private System.Windows.Forms.RichTextBox MemDisp;
+        private System.Windows.Forms.PictureBox ClearMEMBTN;
     }
 }
 
