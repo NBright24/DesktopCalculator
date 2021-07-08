@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Desktop_Calculator
 {
-    public partial class MemoryWindow : Form
+    public partial class HistoryWindow : Form
     {
-        public MemoryWindow()
+        public HistoryWindow()
         {
             InitializeComponent();
         }
