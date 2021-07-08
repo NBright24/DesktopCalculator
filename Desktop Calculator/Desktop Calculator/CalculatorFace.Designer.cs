@@ -63,7 +63,6 @@ namespace Desktop_Calculator
             this.MEMAddBTN = new System.Windows.Forms.Button();
             this.MEMSubtractBTN = new System.Windows.Forms.Button();
             this.MEMSaveBTN = new System.Windows.Forms.Button();
-            this.Memory = new System.Windows.Forms.Button();
             this.MenuIcon = new System.Windows.Forms.Label();
             this.HistDisplay = new System.Windows.Forms.RichTextBox();
             this.ClearHistBTN = new System.Windows.Forms.PictureBox();
@@ -497,10 +496,11 @@ namespace Desktop_Calculator
             this.MEMClearBTN.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MEMClearBTN.Location = new System.Drawing.Point(4, 118);
             this.MEMClearBTN.Name = "MEMClearBTN";
-            this.MEMClearBTN.Size = new System.Drawing.Size(62, 27);
+            this.MEMClearBTN.Size = new System.Drawing.Size(74, 27);
             this.MEMClearBTN.TabIndex = 82;
             this.MEMClearBTN.Text = "MC";
             this.MEMClearBTN.UseVisualStyleBackColor = false;
+            this.MEMClearBTN.Click += new System.EventHandler(this.MEMClearBTN_Click);
             // 
             // MEMRecallBTN
             // 
@@ -509,12 +509,13 @@ namespace Desktop_Calculator
             this.MEMRecallBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMRecallBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMRecallBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMRecallBTN.Location = new System.Drawing.Point(73, 118);
+            this.MEMRecallBTN.Location = new System.Drawing.Point(84, 118);
             this.MEMRecallBTN.Name = "MEMRecallBTN";
-            this.MEMRecallBTN.Size = new System.Drawing.Size(60, 27);
+            this.MEMRecallBTN.Size = new System.Drawing.Size(77, 27);
             this.MEMRecallBTN.TabIndex = 83;
             this.MEMRecallBTN.Text = "MR";
             this.MEMRecallBTN.UseVisualStyleBackColor = false;
+            this.MEMRecallBTN.Click += new System.EventHandler(this.MEMRecallBTN_Click);
             // 
             // MEMAddBTN
             // 
@@ -523,12 +524,13 @@ namespace Desktop_Calculator
             this.MEMAddBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMAddBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMAddBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMAddBTN.Location = new System.Drawing.Point(139, 118);
+            this.MEMAddBTN.Location = new System.Drawing.Point(167, 118);
             this.MEMAddBTN.Name = "MEMAddBTN";
-            this.MEMAddBTN.Size = new System.Drawing.Size(59, 27);
+            this.MEMAddBTN.Size = new System.Drawing.Size(73, 27);
             this.MEMAddBTN.TabIndex = 84;
             this.MEMAddBTN.Text = "M+";
             this.MEMAddBTN.UseVisualStyleBackColor = false;
+            this.MEMAddBTN.Click += new System.EventHandler(this.MEMAddBTN_Click);
             // 
             // MEMSubtractBTN
             // 
@@ -537,12 +539,13 @@ namespace Desktop_Calculator
             this.MEMSubtractBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMSubtractBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMSubtractBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMSubtractBTN.Location = new System.Drawing.Point(204, 118);
+            this.MEMSubtractBTN.Location = new System.Drawing.Point(246, 118);
             this.MEMSubtractBTN.Name = "MEMSubtractBTN";
-            this.MEMSubtractBTN.Size = new System.Drawing.Size(61, 27);
+            this.MEMSubtractBTN.Size = new System.Drawing.Size(73, 27);
             this.MEMSubtractBTN.TabIndex = 85;
             this.MEMSubtractBTN.Text = "M-";
             this.MEMSubtractBTN.UseVisualStyleBackColor = false;
+            this.MEMSubtractBTN.Click += new System.EventHandler(this.MEMSubtractBTN_Click);
             // 
             // MEMSaveBTN
             // 
@@ -551,26 +554,13 @@ namespace Desktop_Calculator
             this.MEMSaveBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MEMSaveBTN.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MEMSaveBTN.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.MEMSaveBTN.Location = new System.Drawing.Point(270, 118);
+            this.MEMSaveBTN.Location = new System.Drawing.Point(325, 118);
             this.MEMSaveBTN.Name = "MEMSaveBTN";
-            this.MEMSaveBTN.Size = new System.Drawing.Size(66, 27);
+            this.MEMSaveBTN.Size = new System.Drawing.Size(81, 27);
             this.MEMSaveBTN.TabIndex = 86;
             this.MEMSaveBTN.Text = "MS";
             this.MEMSaveBTN.UseVisualStyleBackColor = false;
-            // 
-            // Memory
-            // 
-            this.Memory.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Memory.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlLight;
-            this.Memory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Memory.Font = new System.Drawing.Font("Segoe MDL2 Assets", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Memory.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Memory.Location = new System.Drawing.Point(340, 118);
-            this.Memory.Name = "Memory";
-            this.Memory.Size = new System.Drawing.Size(66, 27);
-            this.Memory.TabIndex = 87;
-            this.Memory.Text = "M";
-            this.Memory.UseVisualStyleBackColor = false;
+            this.MEMSaveBTN.Click += new System.EventHandler(this.MEMSaveBTN_Click);
             // 
             // MenuIcon
             // 
@@ -704,7 +694,6 @@ namespace Desktop_Calculator
             this.Controls.Add(this.ClearHistBTN);
             this.Controls.Add(this.HistDisplay);
             this.Controls.Add(this.MenuIcon);
-            this.Controls.Add(this.Memory);
             this.Controls.Add(this.MEMSaveBTN);
             this.Controls.Add(this.MEMSubtractBTN);
             this.Controls.Add(this.MEMAddBTN);
@@ -785,7 +774,6 @@ namespace Desktop_Calculator
         private System.Windows.Forms.Button MEMAddBTN;
         private System.Windows.Forms.Button MEMSubtractBTN;
         private System.Windows.Forms.Button MEMSaveBTN;
-        private System.Windows.Forms.Button Memory;
         private System.Windows.Forms.Label MenuIcon;
         public System.Windows.Forms.Button EqualBTN;
         public System.Windows.Forms.TextBox ValueBox;

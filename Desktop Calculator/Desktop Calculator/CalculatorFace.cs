@@ -238,6 +238,31 @@ namespace Desktop_Calculator
         {
 
         }
+        private void MEMRecallBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MEMAddBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MEMSubtractBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MEMClearBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MEMSaveBTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 
