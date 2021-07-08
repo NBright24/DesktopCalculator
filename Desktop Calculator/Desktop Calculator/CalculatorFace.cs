@@ -135,12 +135,13 @@ namespace Desktop_Calculator
 
         private void ClearEntryBTN_Click(object sender, EventArgs e)
         {
-
+            ValueBox.Text = "0";
         }
 
         private void ClearBTN_Click(object sender, EventArgs e)
         {
-
+            ValueBox.Text = "0";
+            Result = 0;
         }
 
         private void BackSpaceBTN_Click(object sender, EventArgs e)
