@@ -213,7 +213,12 @@ namespace Desktop_Calculator
                 case "/":
                     ValueBox.Text = ((Result / Double.Parse(ValueBox.Text))).ToString();
                     break;
+                default:
+                    break;
             }
+
+            Result = Double.Parse(ValueBox.Text);
+            Operation = "";
         }
     }
 }
