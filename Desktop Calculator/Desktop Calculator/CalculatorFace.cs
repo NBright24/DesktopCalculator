@@ -178,10 +178,20 @@ namespace Desktop_Calculator
 
         private void ArithOp(String X)
         {
-            Operation = X;
-            Result = Double.Parse(ValueBox.Text);
-            ValueBox.Text = "";
-            EquationBox.Text = Convert.ToString(Result) + " " + Operation;
+            if (Result != 0)
+            {
+                EqualBTN.PerformClick();
+                ValEnter = true;
+                Operation = X;
+                EquationBox.Text = Convert.ToString(Result) + " " + Operation;
+            }
+            else
+            {
+                Operation = X;
+                Result = Double.Parse(ValueBox.Text);
+                ValueBox.Text = "";
+                EquationBox.Text = Convert.ToString(Result) + " " + Operation;
+            }
         }
     }
 }
