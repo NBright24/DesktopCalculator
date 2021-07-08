@@ -16,7 +16,6 @@ namespace Desktop_Calculator
         double Result = 0;
         string Operation = "";
         bool ValEnter = false;
-        double ExtraVal = 0;
         string Val1, Val2;
         bool HistorySelect = true;
 
@@ -119,9 +118,10 @@ namespace Desktop_Calculator
         private void FractionBTN_Click(object sender, EventArgs e)
         {
             //METHOD THIS
-            ExtraVal = double.Parse(ValueBox.Text);
-            EquationBox.Text = "1 /" + ExtraVal.ToString();
-            ValueBox.Text = (1 / ExtraVal).ToString();
+            EquationBox.Text = "";
+            Result = double.Parse(ValueBox.Text);
+            EquationBox.Text = "1 / " + Result.ToString();
+            ValueBox.Text = (1 / Result).ToString();
             Result = Double.Parse(ValueBox.Text);
 
             HistoryAdd();
@@ -129,11 +129,19 @@ namespace Desktop_Calculator
 
         private void SquareBTN_Click(object sender, EventArgs e)
         {
+            //METHOD THIS
+            EquationBox.Text = "";
+            Result = double.Parse(ValueBox.Text);
+            EquationBox.Text = "sqr(" + Result + ")";
+            ValueBox.Text = (Result * Result).ToString();
+            Result = Double.Parse(ValueBox.Text);
 
+            HistoryAdd();
         }
 
         private void SqrtBTN_Click(object sender, EventArgs e)
         {
+            //METHOD THIS
 
         }
 
