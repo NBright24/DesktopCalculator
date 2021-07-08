@@ -77,7 +77,6 @@ namespace Desktop_Calculator
             this.PosNegBTN.TabIndex = 53;
             this.PosNegBTN.Text = "∓";
             this.PosNegBTN.UseVisualStyleBackColor = false;
-            this.PosNegBTN.Click += new System.EventHandler(this.PosNegBTN_Click);
             // 
             // EqualBTN
             // 
@@ -92,7 +91,6 @@ namespace Desktop_Calculator
             this.EqualBTN.TabIndex = 54;
             this.EqualBTN.Text = "=";
             this.EqualBTN.UseVisualStyleBackColor = false;
-            this.EqualBTN.Click += new System.EventHandler(this.EqualBTN_Click);
             // 
             // ZeroBTN
             // 
@@ -163,7 +161,6 @@ namespace Desktop_Calculator
             this.AddBTN.TabIndex = 58;
             this.AddBTN.Text = "+";
             this.AddBTN.UseVisualStyleBackColor = false;
-            this.AddBTN.Click += new System.EventHandler(this.PlusBTN_Click);
             // 
             // OneBTN
             // 
@@ -220,7 +217,6 @@ namespace Desktop_Calculator
             this.SubtractBTN.TabIndex = 62;
             this.SubtractBTN.Text = "-";
             this.SubtractBTN.UseVisualStyleBackColor = false;
-            this.SubtractBTN.Click += new System.EventHandler(this.MinusBTN_Click);
             // 
             // FourBTN
             // 
@@ -277,7 +273,6 @@ namespace Desktop_Calculator
             this.MultiplyBTN.TabIndex = 66;
             this.MultiplyBTN.Text = "×";
             this.MultiplyBTN.UseVisualStyleBackColor = false;
-            this.MultiplyBTN.Click += new System.EventHandler(this.MultiplyBTN_Click);
             // 
             // SevenBTN
             // 
@@ -306,7 +301,6 @@ namespace Desktop_Calculator
             this.SqrtBTN.TabIndex = 72;
             this.SqrtBTN.Text = "√x";
             this.SqrtBTN.UseVisualStyleBackColor = false;
-            this.SqrtBTN.Click += new System.EventHandler(this.SqrtBTN_Click);
             // 
             // SquareBTN
             // 
@@ -321,7 +315,6 @@ namespace Desktop_Calculator
             this.SquareBTN.TabIndex = 71;
             this.SquareBTN.Text = "x²";
             this.SquareBTN.UseVisualStyleBackColor = false;
-            this.SquareBTN.Click += new System.EventHandler(this.SquareBTN_Click);
             // 
             // DivideBTN
             // 
@@ -336,7 +329,6 @@ namespace Desktop_Calculator
             this.DivideBTN.TabIndex = 70;
             this.DivideBTN.Text = "÷";
             this.DivideBTN.UseVisualStyleBackColor = false;
-            this.DivideBTN.Click += new System.EventHandler(this.DivideBTN_Click);
             // 
             // FractionBTN
             // 
@@ -351,7 +343,6 @@ namespace Desktop_Calculator
             this.FractionBTN.TabIndex = 69;
             this.FractionBTN.Text = "⅟";
             this.FractionBTN.UseVisualStyleBackColor = false;
-            this.FractionBTN.Click += new System.EventHandler(this.FractionBTN_Click);
             // 
             // ClearBTN
             // 
@@ -366,7 +357,6 @@ namespace Desktop_Calculator
             this.ClearBTN.TabIndex = 76;
             this.ClearBTN.Text = "C";
             this.ClearBTN.UseVisualStyleBackColor = false;
-            this.ClearBTN.Click += new System.EventHandler(this.ClearBTN_Click);
             // 
             // ClearEntryBTN
             // 
@@ -381,7 +371,6 @@ namespace Desktop_Calculator
             this.ClearEntryBTN.TabIndex = 75;
             this.ClearEntryBTN.Text = "CE";
             this.ClearEntryBTN.UseVisualStyleBackColor = false;
-            this.ClearEntryBTN.Click += new System.EventHandler(this.ClearEntryBTN_Click);
             // 
             // BackSpaceBTN
             // 
@@ -396,7 +385,6 @@ namespace Desktop_Calculator
             this.BackSpaceBTN.TabIndex = 74;
             this.BackSpaceBTN.Text = "⌫";
             this.BackSpaceBTN.UseVisualStyleBackColor = false;
-            this.BackSpaceBTN.Click += new System.EventHandler(this.BackSpaceBTN_Click);
             // 
             // PercentBTN
             // 
@@ -411,7 +399,6 @@ namespace Desktop_Calculator
             this.PercentBTN.TabIndex = 73;
             this.PercentBTN.Text = "%";
             this.PercentBTN.UseVisualStyleBackColor = false;
-            this.PercentBTN.Click += new System.EventHandler(this.PercentBTN_Click);
             // 
             // ValueBox
             // 
@@ -428,7 +415,6 @@ namespace Desktop_Calculator
             this.ValueBox.TabIndex = 77;
             this.ValueBox.Text = "0";
             this.ValueBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.ValueBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueBox_KeyPress);
             // 
             // EquationBox
             // 
