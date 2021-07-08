@@ -284,7 +284,11 @@ namespace Desktop_Calculator
 
             ClearHistBTN.Visible = true;
 
-            HistDisplay.Text = "";
+            if (HistDisplay.Text == "There's no history yet")
+            {
+                HistDisplay.Text = ""; 
+            }
+
             HistDisplay.AppendText(Val1 + " " + Val2 + " = " + "\n");
             HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
             EquationBox.Text = "";

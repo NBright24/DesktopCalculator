@@ -449,6 +449,7 @@ namespace Desktop_Calculator
             this.ValueBox.Location = new System.Drawing.Point(3, 65);
             this.ValueBox.MaxLength = 20;
             this.ValueBox.Name = "ValueBox";
+            this.ValueBox.PlaceholderText = "Sample";
             this.ValueBox.ReadOnly = true;
             this.ValueBox.Size = new System.Drawing.Size(403, 50);
             this.ValueBox.TabIndex = 77;
