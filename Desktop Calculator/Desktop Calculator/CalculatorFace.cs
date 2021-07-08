@@ -284,9 +284,10 @@ namespace Desktop_Calculator
 
             ClearHistBTN.Visible = true;
 
+            HistDisplay.Text = "";
             HistDisplay.AppendText(Val1 + " " + Val2 + " = " + "\n");
             HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
-            HistDisplay.Text = "";
+            EquationBox.Text = "";
            
         }
 

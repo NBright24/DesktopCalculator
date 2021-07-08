@@ -587,18 +587,18 @@ namespace Desktop_Calculator
             // 
             this.HistDisplay.BackColor = System.Drawing.SystemColors.ControlLight;
             this.HistDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.HistDisplay.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HistDisplay.Location = new System.Drawing.Point(412, 48);
+            this.HistDisplay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HistDisplay.Location = new System.Drawing.Point(427, 48);
             this.HistDisplay.Name = "HistDisplay";
             this.HistDisplay.ReadOnly = true;
-            this.HistDisplay.Size = new System.Drawing.Size(294, 410);
+            this.HistDisplay.Size = new System.Drawing.Size(262, 410);
             this.HistDisplay.TabIndex = 89;
             this.HistDisplay.Text = "There\'s no history yet";
             // 
             // ClearHistBTN
             // 
             this.ClearHistBTN.Image = ((System.Drawing.Image)(resources.GetObject("ClearHistBTN.Image")));
-            this.ClearHistBTN.Location = new System.Drawing.Point(678, 464);
+            this.ClearHistBTN.Location = new System.Drawing.Point(661, 464);
             this.ClearHistBTN.Name = "ClearHistBTN";
             this.ClearHistBTN.Size = new System.Drawing.Size(28, 28);
             this.ClearHistBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -622,7 +622,7 @@ namespace Desktop_Calculator
             // 
             this.HistoryLBL.AutoSize = true;
             this.HistoryLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.HistoryLBL.Location = new System.Drawing.Point(412, 7);
+            this.HistoryLBL.Location = new System.Drawing.Point(427, 7);
             this.HistoryLBL.Name = "HistoryLBL";
             this.HistoryLBL.Size = new System.Drawing.Size(66, 23);
             this.HistoryLBL.TabIndex = 92;
@@ -633,7 +633,7 @@ namespace Desktop_Calculator
             // 
             this.MemoryLBL.AutoSize = true;
             this.MemoryLBL.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MemoryLBL.Location = new System.Drawing.Point(484, 7);
+            this.MemoryLBL.Location = new System.Drawing.Point(499, 7);
             this.MemoryLBL.Name = "MemoryLBL";
             this.MemoryLBL.Size = new System.Drawing.Size(76, 23);
             this.MemoryLBL.TabIndex = 93;
@@ -645,7 +645,7 @@ namespace Desktop_Calculator
             this.HighlightHIST.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.HighlightHIST.FlatAppearance.BorderSize = 0;
             this.HighlightHIST.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HighlightHIST.Location = new System.Drawing.Point(412, 31);
+            this.HighlightHIST.Location = new System.Drawing.Point(427, 31);
             this.HighlightHIST.Name = "HighlightHIST";
             this.HighlightHIST.Size = new System.Drawing.Size(66, 5);
             this.HighlightHIST.TabIndex = 94;
@@ -656,7 +656,7 @@ namespace Desktop_Calculator
             this.HighlightMEM.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.HighlightMEM.FlatAppearance.BorderSize = 0;
             this.HighlightMEM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HighlightMEM.Location = new System.Drawing.Point(484, 31);
+            this.HighlightMEM.Location = new System.Drawing.Point(499, 31);
             this.HighlightMEM.Name = "HighlightMEM";
             this.HighlightMEM.Size = new System.Drawing.Size(76, 5);
             this.HighlightMEM.TabIndex = 95;
@@ -667,11 +667,11 @@ namespace Desktop_Calculator
             // 
             this.MemDisp.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MemDisp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MemDisp.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MemDisp.Location = new System.Drawing.Point(412, 48);
+            this.MemDisp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MemDisp.Location = new System.Drawing.Point(427, 48);
             this.MemDisp.Name = "MemDisp";
             this.MemDisp.ReadOnly = true;
-            this.MemDisp.Size = new System.Drawing.Size(294, 410);
+            this.MemDisp.Size = new System.Drawing.Size(262, 410);
             this.MemDisp.TabIndex = 96;
             this.MemDisp.Text = "There\'s no memory yet";
             this.MemDisp.Visible = false;
@@ -679,7 +679,7 @@ namespace Desktop_Calculator
             // ClearMEMBTN
             // 
             this.ClearMEMBTN.Image = ((System.Drawing.Image)(resources.GetObject("ClearMEMBTN.Image")));
-            this.ClearMEMBTN.Location = new System.Drawing.Point(678, 464);
+            this.ClearMEMBTN.Location = new System.Drawing.Point(661, 464);
             this.ClearMEMBTN.Name = "ClearMEMBTN";
             this.ClearMEMBTN.Size = new System.Drawing.Size(28, 28);
             this.ClearMEMBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
