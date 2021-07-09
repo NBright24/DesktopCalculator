@@ -103,10 +103,7 @@ namespace Desktop_Calculator
             if (Result != 0)
             {
                 Compute();
-                if (Count2 == 0)
-                {
-                    OtherFeature.HistoryAdd();
-                }
+                
                 ValEnter = true;
                 Operation = X;
                 EquationBox = Convert.ToString(Result) + " " + Operation;
@@ -143,8 +140,6 @@ namespace Desktop_Calculator
             EquationBox = "1 / " + Result.ToString() + " = ";
             ValueBox = (1 / Result).ToString();
             Result = Double.Parse(ValueBox);
-
-            OtherFeature.HistoryAdd();
         }
 
         public void Sqrt()
@@ -154,7 +149,7 @@ namespace Desktop_Calculator
             EquationBox = "√" + Result + " = ";
             ValueBox = (Math.Sqrt(Result)).ToString();
 
-            OtherFeature.HistoryAdd();
+            
         }
 
         public void Sqr()
@@ -165,7 +160,7 @@ namespace Desktop_Calculator
             ValueBox = (Result * Result).ToString();
             Result = Double.Parse(ValueBox);
 
-            OtherFeature.HistoryAdd();
+           
         }
 
         public void PosNeg()
@@ -173,5 +168,6 @@ namespace Desktop_Calculator
             Result = Double.Parse(ValueBox);
             ValueBox= (0 - Result).ToString();
         }
+
     }
 }
