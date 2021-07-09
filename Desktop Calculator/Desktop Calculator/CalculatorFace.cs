@@ -193,56 +193,22 @@ namespace Desktop_Calculator
 
         private void HistoryLBL_Click(object sender, EventArgs e)
         {
-            HistorySelect = true;
-
-            HighlightHIST.Visible = true;
-            HighlightMEM.Visible = false;
-            HistDisplay.Visible = true;
-            MemDisp.Visible = false;
-            ClearMEMBTN.Visible = false;
-
-            if (HistDisplay.Text != "There's no history yet")
-            {
-                ClearHistBTN.Visible = true;
-            }
+            HisDispLight();
         }
 
         private void MemoryLBL_Click(object sender, EventArgs e)
         {
-            HistorySelect = false;
-
-            HighlightHIST.Visible = false;
-            HighlightMEM.Visible = true;
-            HistDisplay.Visible = false;
-            MemDisp.Visible = true;
-            ClearHistBTN.Visible = false;
-
-            if (MemDisp.Text != "There's no memory yet")
-            {
-                ClearMEMBTN.Visible = true;
-            }
+            MemDispLight();
         }
 
         private void ClearHistBTN_Click(object sender, EventArgs e)
         {
-            HistDisplay.Clear();
-            if (HistDisplay.Text == "")
-            {
-                HistDisplay.Text = "There's no history yet";
-            }
-            ClearHistBTN.Visible = false;
-            HistDisplay.ScrollBars = 0;
+            ClearDisp(HistDisplay, "There's no history yet", ClearHistBTN);
         }
 
         private void ClearMEMBTN_Click(object sender, EventArgs e)
         {
-            MemDisp.Clear();
-            if (MemDisp.Text == "")
-            {
-                MemDisp.Text = "There's no memory yet";
-            }
-            ClearMEMBTN.Visible = false;
-            MemDisp.ScrollBars = 0;
+            ClearDisp(MemDisp, "There's no memory yet", ClearMEMBTN);
         }
         private void MEMRecallBTN_Click(object sender, EventArgs e)
         {
@@ -381,6 +347,69 @@ namespace Desktop_Calculator
         private void NewFeature()
         {
             MessageBox.Show("Feature coming soon!", "Stay Tuned!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void HisDispLight()
+        {
+            HistorySelect = true;
+
+            HighlightHIST.Visible = true;
+            HighlightMEM.Visible = false;
+            HistDisplay.Visible = true;
+            MemDisp.Visible = false;
+            ClearMEMBTN.Visible = false;
+
+            if (HistDisplay.Text != "There's no history yet")
+            {
+                ClearHistBTN.Visible = true;
+            }
+        }
+
+        private void MemDispLight()
+        {
+            HistorySelect = false;
+
+            HighlightHIST.Visible = false;
+            HighlightMEM.Visible = true;
+            HistDisplay.Visible = false;
+            MemDisp.Visible = true;
+            ClearHistBTN.Visible = false;
+
+            if (MemDisp.Text != "There's no memory yet")
+            {
+                ClearMEMBTN.Visible = true;
+            }
+        }
+
+        private void ClearDisp(RichTextBox X, string Y, PictureBox Z)
+        {
+            X.Clear();
+            if (X.Text == "")
+            {
+                X.Text = Y;
+            }
+            Z.Visible = false;
+            X.ScrollBars = 0;
+        }
+
+        private void Percentage()
+        {
+
+        }
+
+        private void Reciprocal()
+        {
+
+        }
+
+        private void Sqrt()
+        {
+
+        }
+
+        private void Sqr()
+        {
+
         }
     }
 }

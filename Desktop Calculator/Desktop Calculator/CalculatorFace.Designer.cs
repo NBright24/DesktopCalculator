@@ -500,6 +500,7 @@ namespace Desktop_Calculator
             this.MEMClearBTN.TabIndex = 82;
             this.MEMClearBTN.Text = "MC";
             this.MEMClearBTN.UseVisualStyleBackColor = false;
+            this.MEMClearBTN.Visible = false;
             this.MEMClearBTN.Click += new System.EventHandler(this.MEMClearBTN_Click);
             // 
             // MEMRecallBTN
@@ -515,6 +516,7 @@ namespace Desktop_Calculator
             this.MEMRecallBTN.TabIndex = 83;
             this.MEMRecallBTN.Text = "MR";
             this.MEMRecallBTN.UseVisualStyleBackColor = false;
+            this.MEMRecallBTN.Visible = false;
             this.MEMRecallBTN.Click += new System.EventHandler(this.MEMRecallBTN_Click);
             // 
             // MEMAddBTN
