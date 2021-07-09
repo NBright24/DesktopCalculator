@@ -15,7 +15,6 @@ namespace Desktop_Calculator
         CoreFeatures CoreFeature = new CoreFeatures();
 
         double Memory = 0;
-        string Val1, Val2 = "";
 
         public Window()
         {
@@ -106,6 +105,7 @@ namespace Desktop_Calculator
         private void AddBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(AddBTN.Text);
+            HistoryAdd();
             ArithOPCond();
             NumDispFix();
         }
@@ -113,6 +113,7 @@ namespace Desktop_Calculator
         private void SubtractBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(SubtractBTN.Text);
+            HistoryAdd();
             ArithOPCond();
             NumDispFix();
         }
@@ -120,6 +121,7 @@ namespace Desktop_Calculator
         private void MultiplyBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(MultiplyBTN.Text);
+            HistoryAdd();
             ArithOPCond();
             NumDispFix();
         }
@@ -127,6 +129,7 @@ namespace Desktop_Calculator
         private void DivideBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(DivideBTN.Text);
+            HistoryAdd();
             ArithOPCond();
             NumDispFix();
         }
@@ -301,7 +304,7 @@ namespace Desktop_Calculator
                 HistDisplay.Text = "";
             }
 
-            HistDisplay.AppendText(Val1 + " " + Val2 + " = ");
+            HistDisplay.AppendText(CoreFeature.Val1 + " " + CoreFeature.Val2 + " = ");
             HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
         }
 
