@@ -194,7 +194,7 @@ namespace Desktop_Calculator
         {
             MemDisp = "";
             Memory -= Double.Parse(ValueBox);
-            MemDisp.AppendText(Memory.ToString());
+            MemDispAP = Memory.ToString();
         }
 
         public void MEMCall()
