@@ -16,8 +16,10 @@ namespace Desktop_Calculator
         double Result = 0;
         string Operation = "";
         bool ValEnter = false;
-        string Val1, Val2, Val3;
+        string Val1, Val2;
         bool HistorySelect = true;
+        int Count1 = 0;
+        int Count2 = 1;
 
         public Window()
         {
@@ -242,6 +244,7 @@ namespace Desktop_Calculator
         // DON'T FORGET TO CLEAN THE CODE BEFORE PRESENTATION
         private void NumDisp(string X)
         {
+
             if ((ValueBox.Text == "0") || (ValEnter))
             {
                 ValueBox.Text = "";
@@ -270,9 +273,16 @@ namespace Desktop_Calculator
 
         private void ArithOp(String X)
         {
+            Count2 = Count1 % 2;
+
             if (Result != 0)
             {
-                EqualBTN.PerformClick();
+                //EqualBTN.PerformClick();
+                Compute();
+                if(Count2 == 0)
+                {
+                    HistoryAdd();
+                }
                 ValEnter = true;
                 Operation = X;
                 EquationBox.Text = Convert.ToString(Result) + " " + Operation;
@@ -284,12 +294,12 @@ namespace Desktop_Calculator
                 ValueBox.Text = "";
                 EquationBox.Text = Convert.ToString(Result) + " " + Operation;
             }
-
+            Count1 += 1;
+            Val1 = EquationBox.Text;
         }
 
         public void Compute()
         {
-            Val1 = EquationBox.Text;
             Val2 = ValueBox.Text;
 
             EquationBox.Text = "";
@@ -311,7 +321,6 @@ namespace Desktop_Calculator
                 default:
                     break;
             }
-
             Result = Double.Parse(ValueBox.Text);
             Operation = "";
             EquationBox.Text = Val1 + " " + Val2 + " = " ;
@@ -320,7 +329,6 @@ namespace Desktop_Calculator
 
         private void HistoryAdd()
         {
-            Val3 = ValueBox.Text;
 
             ClearHistBTN.Visible = true;
 
@@ -329,8 +337,9 @@ namespace Desktop_Calculator
                 HistDisplay.Text = "";
             }
 
-            HistDisplay.AppendText(EquationBox.Text);
-            HistDisplay.AppendText("\n\t" + Val3 + "\n\n" ) ;
+                HistDisplay.AppendText(Val1 + " " + Val2 + " = ");
+                HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
+            
         }
 
         private void BackSpace()

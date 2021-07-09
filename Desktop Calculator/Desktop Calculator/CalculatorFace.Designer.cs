@@ -583,14 +583,14 @@ namespace Desktop_Calculator
             this.HistDisplay.Location = new System.Drawing.Point(427, 48);
             this.HistDisplay.Name = "HistDisplay";
             this.HistDisplay.ReadOnly = true;
-            this.HistDisplay.Size = new System.Drawing.Size(262, 410);
+            this.HistDisplay.Size = new System.Drawing.Size(272, 410);
             this.HistDisplay.TabIndex = 89;
             this.HistDisplay.Text = "There\'s no history yet";
             // 
             // ClearHistBTN
             // 
             this.ClearHistBTN.Image = ((System.Drawing.Image)(resources.GetObject("ClearHistBTN.Image")));
-            this.ClearHistBTN.Location = new System.Drawing.Point(661, 464);
+            this.ClearHistBTN.Location = new System.Drawing.Point(671, 464);
             this.ClearHistBTN.Name = "ClearHistBTN";
             this.ClearHistBTN.Size = new System.Drawing.Size(28, 28);
             this.ClearHistBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -663,7 +663,7 @@ namespace Desktop_Calculator
             this.MemDisp.Location = new System.Drawing.Point(427, 48);
             this.MemDisp.Name = "MemDisp";
             this.MemDisp.ReadOnly = true;
-            this.MemDisp.Size = new System.Drawing.Size(262, 410);
+            this.MemDisp.Size = new System.Drawing.Size(272, 410);
             this.MemDisp.TabIndex = 96;
             this.MemDisp.Text = "There\'s no memory yet";
             this.MemDisp.Visible = false;
@@ -671,7 +671,7 @@ namespace Desktop_Calculator
             // ClearMEMBTN
             // 
             this.ClearMEMBTN.Image = ((System.Drawing.Image)(resources.GetObject("ClearMEMBTN.Image")));
-            this.ClearMEMBTN.Location = new System.Drawing.Point(661, 464);
+            this.ClearMEMBTN.Location = new System.Drawing.Point(671, 464);
             this.ClearMEMBTN.Name = "ClearMEMBTN";
             this.ClearMEMBTN.Size = new System.Drawing.Size(28, 28);
             this.ClearMEMBTN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
