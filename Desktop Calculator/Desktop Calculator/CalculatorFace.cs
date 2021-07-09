@@ -151,22 +151,22 @@ namespace Desktop_Calculator
 
         private void MenuIcon_Click(object sender, EventArgs e)
         {
-            CoreFeature.NewFeature();
+            NewFeature();
         }
 
         private void OnTopBTN_Click(object sender, EventArgs e)
         {
-            CoreFeature.NewFeature();
+            NewFeature();
         }
 
         private void HistoryLBL_Click(object sender, EventArgs e)
         {
-            CoreFeature.HisDispLight();
+            HisDispLight();
         }
 
         private void MemoryLBL_Click(object sender, EventArgs e)
         {
-            CoreFeature.MemDispLight();
+            MemDispLight();
         }
 
         private void ClearHistBTN_Click(object sender, EventArgs e)
