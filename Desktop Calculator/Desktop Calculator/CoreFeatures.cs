@@ -10,17 +10,13 @@ namespace Desktop_Calculator
     {
         OtherFeatures OtherFeature = new OtherFeatures();
 
-        public double Result = 0, Memory = 0;
+        public double Result = 0;
         public string Operation = "";
         public bool ValEnter = false;
         public int Count1 = 0, Count2 = 1;
         public string Val1, Val2;
 
-        public string ValueBox, EquationBox, 
-            MemDisp,MEMClearBTNVi, MEMRecallBTNVi, ClearMEMBTNVi,
-                MemDispAP,
-                    F, T
-            = "";
+        public string ValueBox, EquationBox = "";
     
         public void NumDisp(string X)
         {
@@ -176,51 +172,6 @@ namespace Desktop_Calculator
         {
             Result = Double.Parse(ValueBox);
             ValueBox= (0 - Result).ToString();
-        }
-
-        public void MEMSave()
-        {
-            MemDisp= "";
-            Memory = Double.Parse(ValueBox);
-            MemDispAP = Memory.ToString();
-        }
-
-        public void MEMAdd()
-        {
-            MemDisp = "";
-            Memory += Double.Parse(ValueBox);
-            MemDispAP = Memory.ToString();
-        }
-
-        public void MEMSub()
-        {
-            MemDisp = "";
-            Memory -= Double.Parse(ValueBox);
-            MemDispAP = Memory.ToString();
-        }
-
-        public void MEMCall()
-        {
-            ValueBox = Memory.ToString();
-        }
-
-        public void MEMClear()
-        {
-            MEMClearBTNVi = F;
-            MEMRecallBTNVi = F;
-            ClearMEMBTNVi = F;
-
-            Memory = 0;
-        }
-
-        public void MEMDispChange()
-        {
-            if ((MemDisp != "") || (MemDisp != "There's no memory yet"))
-            {
-                MEMClearBTNVi = T;
-                MEMRecallBTNVi = T;
-                ClearMEMBTNVi = T;
-            }
         }
     }
 }
