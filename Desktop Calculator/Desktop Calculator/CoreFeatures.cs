@@ -8,7 +8,7 @@ namespace Desktop_Calculator
 {
     class CoreFeatures
     {
-        OtherFeatures OtherFeaaatures = new OtherFeatures();
+        OtherFeatures OtherFeatures = new OtherFeatures();
 
         public double Result = 0, Memory = 0;
         public string Operation = "";
@@ -17,7 +17,7 @@ namespace Desktop_Calculator
         public string Val1, Val2;
 
         public string ValueBox, EquationBox, 
-            MemDisp,MEMClearBTN, MEMRecallBTN, ClearMEMBTN,
+            MemDisp,MEMClearBTNVi, MEMRecallBTNVi, ClearMEMBTNVi,
              MemDispAP = "";
     
         public void NumDisp(string X)
@@ -156,7 +156,7 @@ namespace Desktop_Calculator
             EquationBox = "√" + Result + " = ";
             ValueBox = (Math.Sqrt(Result)).ToString();
 
-            HistoryAdd();
+            OtherFeatures
         }
 
         public void Sqr()
@@ -204,9 +204,9 @@ namespace Desktop_Calculator
 
         public void MEMClear()
         {
-            MEMClearBTN.Visible = false;
-            MEMRecallBTN.Visible = false;
-            ClearMEMBTN.Visible = false;
+            MEMClearBTNVi = false;
+            MEMRecallBTNVi = false;
+            ClearMEMBTNVi = false;
 
             Memory = 0;
         }
@@ -215,9 +215,9 @@ namespace Desktop_Calculator
         {
             if ((MemDisp != "") || (MemDisp != "There's no memory yet"))
             {
-                MEMClearBTN.Visible = true;
-                MEMRecallBTN.Visible = true;
-                ClearMEMBTN.Visible = true;
+                MEMClearBTNVi = true;
+                MEMRecallBTNVi = true;
+                ClearMEMBTNVi = true;
             }
         }
     }
