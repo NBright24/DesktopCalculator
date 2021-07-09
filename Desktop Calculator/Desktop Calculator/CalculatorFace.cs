@@ -16,7 +16,7 @@ namespace Desktop_Calculator
         double Result = 0;
         string Operation = "";
         bool ValEnter = false;
-        string Val1, Val2;
+        string Val1, Val2, Val3;
         bool HistorySelect = true;
 
         public Window()
@@ -290,6 +290,7 @@ namespace Desktop_Calculator
         public void Compute()
         {
             Val1 = EquationBox.Text;
+            Val2 = ValueBox.Text;
 
             EquationBox.Text = "";
 
@@ -313,12 +314,13 @@ namespace Desktop_Calculator
 
             Result = Double.Parse(ValueBox.Text);
             Operation = "";
+            EquationBox.Text = Val1 + " " + Val2 + " = " ;
 
         }
 
         private void HistoryAdd()
         {
-            Val2 = ValueBox.Text;
+            Val3 = ValueBox.Text;
 
             ClearHistBTN.Visible = true;
 
@@ -327,8 +329,8 @@ namespace Desktop_Calculator
                 HistDisplay.Text = "";
             }
 
-            HistDisplay.AppendText(Val1 + " " + Val2 + " = " + "\n");
-            HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
+            HistDisplay.AppendText(EquationBox.Text);
+            HistDisplay.AppendText("\n\t" + Val3 + "\n\n" ) ;
         }
 
         private void BackSpace()
