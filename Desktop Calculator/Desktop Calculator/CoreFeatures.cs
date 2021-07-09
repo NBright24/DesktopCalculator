@@ -8,8 +8,6 @@ namespace Desktop_Calculator
 {
     class CoreFeatures
     {
-        OtherFeatures OtherFeature = new OtherFeatures();
-
         public double Result = 0;
         public string Operation = "";
         public bool ValEnter = false;

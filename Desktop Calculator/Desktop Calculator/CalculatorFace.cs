@@ -13,7 +13,6 @@ namespace Desktop_Calculator
     public partial class Window : Form
     {
         CoreFeatures CoreFeature = new CoreFeatures();
-        OtherFeatures OtherFeature = new OtherFeatures();
 
         double Memory = 0;
         string Val1, Val2 = "";
@@ -25,121 +24,145 @@ namespace Desktop_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            CoreFeature.ValueBox = ValueBox.Text;
-            CoreFeature.EquationBox = EquationBox.Text;
+            //CoreFeature.ValueBox = ValueBox.Text;
+            //CoreFeature.EquationBox = EquationBox.Text;
+
+            //ValueBox.Text = CoreFeature.ValueBox;
+            //EquationBox.Text = CoreFeature.EquationBox;
         }
 
         private void ZeroBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("0");
+            NumDispFix();
         }
 
         private void OneBTN_Click(object sender, EventArgs e)
-        {
+        { 
             CoreFeature.NumDisp("1");
+            NumDispFix();
         }
 
         private void TwoBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("2");
+            NumDispFix();
         }
 
         private void ThreeBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("3");
+            NumDispFix();
         }
 
         private void FourBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("4");
+            NumDispFix();
         }
 
         private void FiveBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("5");
+            NumDispFix();
         }
 
         private void SixBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("6");
+            NumDispFix();
         }
 
         private void SevenBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("7");
+            NumDispFix();
         }
 
         private void EightBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("8");
+            NumDispFix();
         }
 
         private void NineBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp("9");
+            NumDispFix();
         }
 
         private void PointBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.NumDisp(".");
+            NumDispFix();
         }
 
         private void PosNegBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.PosNeg();
+            NumDispFix();
         }
 
         private void AddBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(AddBTN.Text);
-            ArithOPCond();      
+            ArithOPCond();
+            NumDispFix();
         }
 
         private void SubtractBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(SubtractBTN.Text);
             ArithOPCond();
+            NumDispFix();
         }
 
         private void MultiplyBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(MultiplyBTN.Text);
             ArithOPCond();
+            NumDispFix();
         }
 
         private void DivideBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(DivideBTN.Text);
             ArithOPCond();
+            NumDispFix();
         }
 
         private void EqualBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.Compute();
             HistoryAdd();
+            NumDispFix();
         }
 
         private void FractionBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.Reciprocal();
             HistoryAdd();
+            NumDispFix();
         }
 
         private void SquareBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.Sqr();
             HistoryAdd();
+            NumDispFix();
         }
 
         private void SqrtBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.Sqrt();
             HistoryAdd();
+            NumDispFix();
         }
 
         private void PercentBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.Percentage();
+            NumDispFix();
         }
 
         private void ClearEntryBTN_Click(object sender, EventArgs e)
@@ -150,11 +173,13 @@ namespace Desktop_Calculator
         private void ClearBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ClearVal();
+            NumDispFix();
         }
 
         private void BackSpaceBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.BackSpace();
+            NumDispFix();
         }
 
         private void MenuIcon_Click(object sender, EventArgs e)
@@ -334,6 +359,12 @@ namespace Desktop_Calculator
             {
                 HistoryAdd();
             }
+        }
+
+        public void NumDispFix()
+        {
+            ValueBox.Text = CoreFeature.ValueBox;
+            EquationBox.Text = CoreFeature.EquationBox;
         }
     }   
 }
