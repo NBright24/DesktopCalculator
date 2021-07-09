@@ -218,7 +218,6 @@ namespace Desktop_Calculator
             MemDisp.Text = "";
             Memory = Double.Parse(ValueBox.Text);
             MemDisp.AppendText(Memory.ToString());
-
         }
 
         public void MEMAdd()
@@ -242,20 +241,20 @@ namespace Desktop_Calculator
 
         public void MEMClear()
         {
-            MEMClearBTNvI = F;
-            MEMRecallBTN = F;
-            ClearMEMBTNVi = F;
+            MEMClearBTN.Visible = false;
+            MEMRecallBTN.Visible = false;
+            ClearMEMBTN.Visible = false;
 
             Memory = 0;
         }
 
         public void MEMDispChange()
         {
-            if ((MemDisp != "") || (MemDisp != "There's no memory yet"))
+            if ((MemDisp.Text != "") || (MemDisp.Text != "There's no memory yet"))
             {
-                MEMClearBTNVi = T;
-                MEMRecallBTNVi = T;
-                ClearMEMBTNVi = T;
+                MEMClearBTN.Visible = true;
+                MEMRecallBTN.Visible = true;
+                ClearMEMBTN.Visible = true;
             }
         }
     }   
