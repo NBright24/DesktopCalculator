@@ -13,13 +13,12 @@ namespace Desktop_Calculator
     public partial class Window : Form
     {
 
-        double Result = 0;
+        double Result = 0, Memory = 0;
         string Operation = "";
         bool ValEnter = false;
         string Val1, Val2;
         bool HistorySelect = true;
-        int Count1 = 0;
-        int Count2 = 1;
+        int Count1 = 0, Count2 = 1;
 
         public Window()
         {
@@ -88,8 +87,7 @@ namespace Desktop_Calculator
 
         private void PosNegBTN_Click(object sender, EventArgs e)
         {
-            Result = Double.Parse(ValueBox.Text);
-            ValueBox.Text = (0 - Result).ToString();
+            PosNeg();
         }
 
         private void AddBTN_Click(object sender, EventArgs e)
@@ -120,50 +118,22 @@ namespace Desktop_Calculator
 
         private void FractionBTN_Click(object sender, EventArgs e)
         {
-            //METHOD THIS
-            EquationBox.Text = "";
-            Result = double.Parse(ValueBox.Text);
-            EquationBox.Text = "1 / " + Result.ToString();
-            ValueBox.Text = (1 / Result).ToString();
-            Result = Double.Parse(ValueBox.Text);
-
-            HistoryAdd();
+            Reciprocal();
         }
 
         private void SquareBTN_Click(object sender, EventArgs e)
         {
-            //METHOD THIS
-            EquationBox.Text = "";
-            Result = double.Parse(ValueBox.Text);
-            EquationBox.Text = "sqr(" + Result + ")";
-            ValueBox.Text = (Result * Result).ToString();
-            Result = Double.Parse(ValueBox.Text);
-
-            HistoryAdd();
+            Sqr();
         }
 
         private void SqrtBTN_Click(object sender, EventArgs e)
         {
-            //METHOD THIS
-            EquationBox.Text = "";
-            Result = double.Parse(ValueBox.Text);
-            EquationBox.Text = "√" + Result;
-            ValueBox.Text = (Math.Sqrt(Result)).ToString();
+            Sqrt();
         }
 
         private void PercentBTN_Click(object sender, EventArgs e)
         {
-            //METHOD THIS
-            if (EquationBox.Text != "")
-            {
-                Result = Double.Parse(ValueBox.Text);
-                ValueBox.Text = (Result / 100).ToString();
-            }
-            else
-            {
-                ValueBox.Text = "0";
-                Result = Double.Parse(ValueBox.Text);
-            }
+            Percentage();
         }
 
         private void ClearEntryBTN_Click(object sender, EventArgs e)
@@ -211,30 +181,32 @@ namespace Desktop_Calculator
         private void ClearMEMBTN_Click(object sender, EventArgs e)
         {
             ClearDisp(MemDisp, "There's no memory yet", ClearMEMBTN);
+            Memory = 0;
         }
         private void MEMRecallBTN_Click(object sender, EventArgs e)
         {
-
+            MEMCall();
         }
 
         private void MEMAddBTN_Click(object sender, EventArgs e)
         {
-
+            MEMAdd();
         }
 
         private void MEMSubtractBTN_Click(object sender, EventArgs e)
         {
-
+            MEMSub();
         }
 
         private void MEMClearBTN_Click(object sender, EventArgs e)
         {
-
+            ClearDisp(MemDisp, "There's no memory yet", ClearMEMBTN);
+            Memory = 0;
         }
 
         private void MEMSaveBTN_Click(object sender, EventArgs e)
         {
-
+            MEMSave();
         }
 
 
@@ -273,6 +245,7 @@ namespace Desktop_Calculator
 
         private void ArithOp(String X)
         {
+            //STILL NEEDS A BETTER FIX!
             Count2 = Count1 % 2;
 
             if (Result != 0)
@@ -329,7 +302,7 @@ namespace Desktop_Calculator
 
         private void HistoryAdd()
         {
-
+            //STILL NEEDS A BETTER FIX!
             ClearHistBTN.Visible = true;
 
             if (HistDisplay.Text == "There's no history yet")
@@ -405,22 +378,77 @@ namespace Desktop_Calculator
 
         private void Percentage()
         {
-
+            if (EquationBox.Text != "")
+            {
+                Result = Double.Parse(ValueBox.Text);
+                ValueBox.Text = (Result / 100).ToString();
+            }
+            else
+            {
+                ValueBox.Text = "0";
+                Result = Double.Parse(ValueBox.Text);
+            }
         }
 
         private void Reciprocal()
         {
+            EquationBox.Text = "";
+            Result = double.Parse(ValueBox.Text);
+            EquationBox.Text = "1 / " + Result.ToString() + " = ";
+            ValueBox.Text = (1 / Result).ToString();
+            Result = Double.Parse(ValueBox.Text);
 
+            HistoryAdd();
         }
 
         private void Sqrt()
         {
+            EquationBox.Text = "";
+            Result = double.Parse(ValueBox.Text);
+            EquationBox.Text = "√" + Result + " = ";
+            ValueBox.Text = (Math.Sqrt(Result)).ToString();
 
+            HistoryAdd();
         }
 
         private void Sqr()
         {
+            EquationBox.Text = "";
+            Result = double.Parse(ValueBox.Text);
+            EquationBox.Text = "sqr(" + Result + ")" + " = ";
+            ValueBox.Text = (Result * Result).ToString();
+            Result = Double.Parse(ValueBox.Text);
 
+            HistoryAdd();
+        }
+
+        private void PosNeg()
+        {
+            Result = Double.Parse(ValueBox.Text);
+            ValueBox.Text = (0 - Result).ToString();
+        }
+
+        private void MEMSave()
+        {
+            Memory = Double.Parse(ValueBox.Text);
+            MemDisp.AppendText(Memory.ToString());
+        }
+
+        private void MEMAdd()
+        {
+            Memory += Double.Parse(ValueBox.Text);
+            MemDisp.AppendText(Memory.ToString());
+        }
+
+        private void MEMSub()
+        {
+            Memory -= Double.Parse(ValueBox.Text);
+            MemDisp.AppendText(Memory.ToString());
+        }
+
+        private void MEMCall()
+        {
+            ValueBox.Text = Memory.ToString();
         }
     }
 }
