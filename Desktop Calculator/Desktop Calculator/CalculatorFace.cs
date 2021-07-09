@@ -26,7 +26,6 @@ namespace Desktop_Calculator
         {
             CoreFeature.ValueBox = ValueBox.Text;
             CoreFeature.EquationBox = EquationBox.Text;
-  
         }
 
         private void ZeroBTN_Click(object sender, EventArgs e)
@@ -86,53 +85,53 @@ namespace Desktop_Calculator
 
         private void PosNegBTN_Click(object sender, EventArgs e)
         {
-            PosNeg();
+            CoreFeature.PosNeg();
         }
 
         private void AddBTN_Click(object sender, EventArgs e)
         {
-            ArithOp(AddBTN.Text);
+            CoreFeature.ArithOp(AddBTN.Text);
         }
 
         private void SubtractBTN_Click(object sender, EventArgs e)
         {
-            ArithOp(SubtractBTN.Text);
+            CoreFeature.ArithOp(SubtractBTN.Text);
         }
 
         private void MultiplyBTN_Click(object sender, EventArgs e)
         {
-            ArithOp(MultiplyBTN.Text);
+            CoreFeature.ArithOp(MultiplyBTN.Text);
         }
 
         private void DivideBTN_Click(object sender, EventArgs e)
         {
-            ArithOp(DivideBTN.Text);
+            CoreFeature.ArithOp(DivideBTN.Text);
         }
 
         private void EqualBTN_Click(object sender, EventArgs e)
         {
-            Compute();
+            CoreFeature.Compute();
             HistoryAdd();
         }
 
         private void FractionBTN_Click(object sender, EventArgs e)
         {
-            Reciprocal();
+            CoreFeature.Reciprocal();
         }
 
         private void SquareBTN_Click(object sender, EventArgs e)
         {
-            Sqr();
+            CoreFeature.Sqr();
         }
 
         private void SqrtBTN_Click(object sender, EventArgs e)
         {
-            Sqrt();
+            CoreFeature.Sqrt();
         }
 
         private void PercentBTN_Click(object sender, EventArgs e)
         {
-            Percentage();
+            CoreFeature.Percentage();
         }
 
         private void ClearEntryBTN_Click(object sender, EventArgs e)
@@ -142,32 +141,32 @@ namespace Desktop_Calculator
 
         private void ClearBTN_Click(object sender, EventArgs e)
         {
-            ClearVal();
+            CoreFeature.ClearVal();
         }
 
         private void BackSpaceBTN_Click(object sender, EventArgs e)
         {
-            BackSpace();
+            CoreFeature.BackSpace();
         }
 
         private void MenuIcon_Click(object sender, EventArgs e)
         {
-            NewFeature();
+            CoreFeature.NewFeature();
         }
 
         private void OnTopBTN_Click(object sender, EventArgs e)
         {
-            NewFeature();
+            CoreFeature.NewFeature();
         }
 
         private void HistoryLBL_Click(object sender, EventArgs e)
         {
-            HisDispLight();
+            CoreFeature.HisDispLight();
         }
 
         private void MemoryLBL_Click(object sender, EventArgs e)
         {
-            MemDispLight();
+            CoreFeature.MemDispLight();
         }
 
         private void ClearHistBTN_Click(object sender, EventArgs e)
