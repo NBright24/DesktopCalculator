@@ -8,7 +8,7 @@ namespace Desktop_Calculator
 {
     class CoreFeatures
     {
-        OtherFeatures OtherFeatures = new OtherFeatures();
+        OtherFeatures OtherFeature = new OtherFeatures();
 
         public double Result = 0, Memory = 0;
         public string Operation = "";
@@ -18,7 +18,9 @@ namespace Desktop_Calculator
 
         public string ValueBox, EquationBox, 
             MemDisp,MEMClearBTNVi, MEMRecallBTNVi, ClearMEMBTNVi,
-             MemDispAP = "";
+                MemDispAP,
+                    F, T
+            = "";
     
         public void NumDisp(string X)
         {
@@ -107,7 +109,7 @@ namespace Desktop_Calculator
                 Compute();
                 if (Count2 == 0)
                 {
-                    HistoryAdd();
+                    OtherFeature.HistoryAdd();
                 }
                 ValEnter = true;
                 Operation = X;
@@ -146,7 +148,7 @@ namespace Desktop_Calculator
             ValueBox = (1 / Result).ToString();
             Result = Double.Parse(ValueBox);
 
-            HistoryAdd();
+            OtherFeature.HistoryAdd();
         }
 
         public void Sqrt()
@@ -156,7 +158,7 @@ namespace Desktop_Calculator
             EquationBox = "√" + Result + " = ";
             ValueBox = (Math.Sqrt(Result)).ToString();
 
-            OtherFeatures
+            OtherFeature.HistoryAdd();
         }
 
         public void Sqr()
@@ -167,19 +169,19 @@ namespace Desktop_Calculator
             ValueBox = (Result * Result).ToString();
             Result = Double.Parse(ValueBox);
 
-            HistoryAdd();
+            OtherFeature.HistoryAdd();
         }
 
         public void PosNeg()
         {
-            Result = Double.Parse(ValueBox.Text);
+            Result = Double.Parse(ValueBox);
             ValueBox= (0 - Result).ToString();
         }
 
         public void MEMSave()
         {
             MemDisp= "";
-            Memory = Double.Parse(ValueBox.);
+            Memory = Double.Parse(ValueBox);
             MemDispAP = Memory.ToString();
         }
 
@@ -204,9 +206,9 @@ namespace Desktop_Calculator
 
         public void MEMClear()
         {
-            MEMClearBTNVi = false;
-            MEMRecallBTNVi = false;
-            ClearMEMBTNVi = false;
+            MEMClearBTNVi = F;
+            MEMRecallBTNVi = F;
+            ClearMEMBTNVi = F;
 
             Memory = 0;
         }
@@ -215,9 +217,9 @@ namespace Desktop_Calculator
         {
             if ((MemDisp != "") || (MemDisp != "There's no memory yet"))
             {
-                MEMClearBTNVi = true;
-                MEMRecallBTNVi = true;
-                ClearMEMBTNVi = true;
+                MEMClearBTNVi = T;
+                MEMRecallBTNVi = T;
+                ClearMEMBTNVi = T;
             }
         }
     }
