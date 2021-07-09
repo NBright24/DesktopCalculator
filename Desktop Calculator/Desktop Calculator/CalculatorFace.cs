@@ -13,11 +13,16 @@ namespace Desktop_Calculator
     public partial class Window : Form
     {
 
-        double Result = 0, Memory = 0;
-        string Operation = "";
-        bool ValEnter = false;
-        string Val1, Val2;
-        bool HistorySelect = true;
+        //double Result = 0, Memory = 0;
+        //string Operation = "";
+        //bool ValEnter = false;
+
+        //string Val1, Val2;
+        //bool HistorySelect = true;
+
+        CoreFeatures CoreFeatures = new CoreFeatures();
+        OtherFeatures OtherFeatures = new OtherFeatures();
+
         int Count1 = 0, Count2 = 1;
 
         public Window()
@@ -27,62 +32,62 @@ namespace Desktop_Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ValueBox.Text = CoreFeatures.ValBox;
         }
 
         private void ZeroBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("0");
+            CoreFeatures.NumDisp("0");
         }
 
         private void OneBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("1");
+            CoreFeatures.NumDisp("1");
         }
 
         private void TwoBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("2");
+            CoreFeatures.NumDisp("2");
         }
 
         private void ThreeBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("3");
+            CoreFeatures.NumDisp("3");
         }
 
         private void FourBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("4");
+            CoreFeatures.NumDisp("4");
         }
 
         private void FiveBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("5");
+            CoreFeatures.NumDisp("5");
         }
 
         private void SixBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("6");
+            CoreFeatures.NumDisp("6");
         }
 
         private void SevenBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("7");
+            CoreFeatures.NumDisp("7");
         }
 
         private void EightBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("8");
+            CoreFeatures.NumDisp("8");
         }
 
         private void NineBTN_Click(object sender, EventArgs e)
         {
-            NumDisp("9");
+            CoreFeatures.NumDisp("9");
         }
 
         private void PointBTN_Click(object sender, EventArgs e)
         {
-            NumDisp(".");
+            CoreFeatures.NumDisp(".");
         }
 
         private void PosNegBTN_Click(object sender, EventArgs e)
@@ -143,9 +148,7 @@ namespace Desktop_Calculator
 
         private void ClearBTN_Click(object sender, EventArgs e)
         {
-            EquationBox.Text = "";
-            ValueBox.Text = "0";
-            Result = 0;
+            ClearVal();
         }
 
         private void BackSpaceBTN_Click(object sender, EventArgs e)
@@ -215,45 +218,15 @@ namespace Desktop_Calculator
         }
 
 
-        // FUNCTION METHODS SECTION
-        // DON'T FORGET TO CLEAN THE CODE BEFORE PRESENTATION
-        private void NumDisp(string X)
-        {
 
-            if ((ValueBox.Text == "0") || (ValEnter))
-            {
-                ValueBox.Text = "";
-                ValEnter = false;
-            }
-            if (X == ".")
-            {
-                if (!ValueBox.Text.Contains("."))
-                {
-                    if (ValueBox.Text == "")
-                    {
-                        ValueBox.Text = "0";
-                        ValueBox.Text += X;
-                    }
-                    else
-                    {
-                        ValueBox.Text += X;
-                    }
-                }
-            }
-            else
-            {
-                ValueBox.Text += X;
-            }
-        }
+        
 
         private void ArithOp(String X)
         {
-            //STILL NEEDS A BETTER FIX!
             Count2 = Count1 % 2;
 
             if (Result != 0)
             {
-                //EqualBTN.PerformClick();
                 Compute();
                 if(Count2 == 0)
                 {
@@ -272,6 +245,13 @@ namespace Desktop_Calculator
             }
             Count1 += 1;
             Val1 = EquationBox.Text;
+        }
+
+        private void ClearVal()
+        {
+            EquationBox.Text = "";
+            ValueBox.Text = "0";
+            Result = 0;
         }
 
         public void Compute()
@@ -305,7 +285,6 @@ namespace Desktop_Calculator
 
         private void HistoryAdd()
         {
-            //STILL NEEDS A BETTER FIX!
             ClearHistBTN.Visible = true;
 
             if (HistDisplay.Text == "There's no history yet")
@@ -315,7 +294,6 @@ namespace Desktop_Calculator
 
                 HistDisplay.AppendText(Val1 + " " + Val2 + " = ");
                 HistDisplay.AppendText("\n\t" + ValueBox.Text + "\n\n");
-            
         }
 
         private void BackSpace()
@@ -436,8 +414,6 @@ namespace Desktop_Calculator
             MemDisp.Text = "";
             Memory = Double.Parse(ValueBox.Text);
             MemDisp.AppendText(Memory.ToString());
-
-            
         }
 
         private void MEMAdd()
@@ -466,7 +442,6 @@ namespace Desktop_Calculator
             ClearMEMBTN.Visible = false;
 
             Memory = 0;
-
         }
 
         private void MEMDispChange()
