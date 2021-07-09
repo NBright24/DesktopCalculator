@@ -667,6 +667,7 @@ namespace Desktop_Calculator
             this.MemDisp.TabIndex = 96;
             this.MemDisp.Text = "There\'s no memory yet";
             this.MemDisp.Visible = false;
+            this.MemDisp.TextChanged += new System.EventHandler(this.MemDisp_TextChanged);
             // 
             // ClearMEMBTN
             // 

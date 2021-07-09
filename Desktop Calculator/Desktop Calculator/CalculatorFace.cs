@@ -181,7 +181,7 @@ namespace Desktop_Calculator
         private void ClearMEMBTN_Click(object sender, EventArgs e)
         {
             ClearDisp(MemDisp, "There's no memory yet", ClearMEMBTN);
-            Memory = 0;
+            MEMClear();
         }
         private void MEMRecallBTN_Click(object sender, EventArgs e)
         {
@@ -201,7 +201,7 @@ namespace Desktop_Calculator
         private void MEMClearBTN_Click(object sender, EventArgs e)
         {
             ClearDisp(MemDisp, "There's no memory yet", ClearMEMBTN);
-            Memory = 0;
+            MEMClear();
         }
 
         private void MEMSaveBTN_Click(object sender, EventArgs e)
@@ -209,7 +209,10 @@ namespace Desktop_Calculator
             MEMSave();
         }
 
-
+        private void MemDisp_TextChanged(object sender, EventArgs e)
+        {
+            MEMDispChange();
+        }
 
 
         // FUNCTION METHODS SECTION
@@ -430,18 +433,23 @@ namespace Desktop_Calculator
 
         private void MEMSave()
         {
+            MemDisp.Text = "";
             Memory = Double.Parse(ValueBox.Text);
             MemDisp.AppendText(Memory.ToString());
+
+            
         }
 
         private void MEMAdd()
         {
+            MemDisp.Text = "";
             Memory += Double.Parse(ValueBox.Text);
             MemDisp.AppendText(Memory.ToString());
         }
 
         private void MEMSub()
         {
+            MemDisp.Text = "";
             Memory -= Double.Parse(ValueBox.Text);
             MemDisp.AppendText(Memory.ToString());
         }
@@ -449,6 +457,26 @@ namespace Desktop_Calculator
         private void MEMCall()
         {
             ValueBox.Text = Memory.ToString();
+        }
+
+        private void MEMClear()
+        {
+            MEMClearBTN.Visible = false;
+            MEMRecallBTN.Visible = false;
+            ClearMEMBTN.Visible = false;
+
+            Memory = 0;
+
+        }
+
+        private void MEMDispChange()
+        {
+            if ((MemDisp.Text != "") || (MemDisp.Text != "There's no memory yet"))
+            {
+                MEMClearBTN.Visible = true;
+                MEMRecallBTN.Visible = true;
+                ClearMEMBTN.Visible = true;
+            }
         }
     }
 }
