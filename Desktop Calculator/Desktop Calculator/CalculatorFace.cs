@@ -105,32 +105,24 @@ namespace Desktop_Calculator
         private void AddBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(AddBTN.Text);
-            //HistoryAdd();
-            ArithOPCond();
             NumDispFix();
         }
 
         private void SubtractBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(SubtractBTN.Text);
-            //HistoryAdd();
-            ArithOPCond();
             NumDispFix();
         }
 
         private void MultiplyBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(MultiplyBTN.Text);
-            //HistoryAdd();
-            ArithOPCond();
             NumDispFix();
         }
 
         private void DivideBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.ArithOp(DivideBTN.Text);
-            //HistoryAdd();
-            ArithOPCond();
             NumDispFix();
         }
 
