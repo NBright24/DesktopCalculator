@@ -129,8 +129,8 @@ namespace Desktop_Calculator
         private void EqualBTN_Click(object sender, EventArgs e)
         {
             CoreFeature.Compute();
-            HistoryAdd();
             NumDispFix();
+            HistoryAdd();
         }
 
         private void FractionBTN_Click(object sender, EventArgs e)
